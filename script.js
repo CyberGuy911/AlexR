@@ -1,0 +1,242 @@
+// --- MOUSE TRACKING FOR SPOTLIGHT ---
+const spotlightEl = document.body; // We toggle opacity on body::before
+// Since pseudo-elements can't be directly accessed, we'll use a class or just rely on the variable
+// Actually, we set opacity: 0 in CSS, so let's toggle a class 'spotlight-active'
+
+document.addEventListener('mousemove', (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+    document.documentElement.style.setProperty('--mouse-x', x + 'px');
+    document.documentElement.style.setProperty('--mouse-y', y + 'px');
+});
+
+// --- TOGGLE SPOTLIGHT VISIBILITY BASED ON SCROLL ---
+window.addEventListener('scroll', () => {
+    const triggerSection = document.getElementById('about-section');
+    // Start effect slightly before the section comes into view
+    if (window.scrollY > (triggerSection.offsetTop - 300)) {
+        document.body.classList.add('spotlight-visible');
+    } else {
+        document.body.classList.remove('spotlight-visible');
+    }
+});
+
+// --- 1. SCROLL DETECTOR FOR STICKY HEADER ---
+window.addEventListener('scroll', function() {
+    const nav = document.getElementById('sticky-nav');
+    const triggerSection = document.getElementById('about-section');
+    const triggerHeight = triggerSection.offsetTop - 150; // Trigger slightly before reaching the section
+
+    if (window.scrollY > triggerHeight) {
+        nav.classList.add('visible');
+    } else {
+        nav.classList.remove('visible');
+    }
+});
+
+// --- 2. STATUS LINE TYPER (Header) ---
+const statusText = "System Online: Available Jan 2026";
+const statusEl = document.getElementById('status-line');
+let statusIdx = 0;
+
+function typeStatus() {
+    if (statusIdx < statusText.length) {
+        statusEl.textContent += statusText.charAt(statusIdx);
+        statusIdx++;
+        setTimeout(typeStatus, 50);
+    }
+}
+setTimeout(typeStatus, 500);
+
+
+// --- 3. GHOST CODER (Top Left - Always Loop) ---
+const ghostSnippet = `
+import { Vapi } from 'vapi-sdk';
+import { createClient } from '@supabase/supabase-js';
+
+// --- SYSTEM: STUDYPOINTS.NET ---
+// Automated Lecture Synthesis Pipeline
+
+const supabase = createClient(env.DB_URL, env.DB_KEY);
+
+async function processAudioStream(streamId) {
+    console.log("[INIT] Connecting Vapi Agent...");
+    
+    // 1. Ingest Audio
+    const session = await Vapi.connect({
+        transcriber: "deepgram-nova-2",
+        model: "gpt-5"
+    });
+
+    // 2. Real-time Analysis
+    session.on('message', async (msg) => {
+        if (msg.type === 'transcript') {
+            await supabase.from('notes').insert({
+                content: msg.text,
+                timestamp: new Date()
+            });
+        }
+    });
+
+    return "PIPELINE_ACTIVE";
+}
+`;
+const ghostWindow = document.getElementById('ghost-code-window');
+let ghostIdx = 0;
+
+function runGhostCoder() {
+    if (ghostIdx < ghostSnippet.length) {
+        ghostWindow.textContent += ghostSnippet.charAt(ghostIdx);
+        ghostWindow.scrollTop = ghostWindow.scrollHeight;
+        ghostIdx++;
+        setTimeout(runGhostCoder, Math.random() * 20 + 5);
+    } else {
+        setTimeout(() => {
+            ghostWindow.textContent = "";
+            ghostIdx = 0;
+            runGhostCoder();
+        }, 3000);
+    }
+}
+runGhostCoder(); 
+
+// --- 5. PREVENT SCROLL TRAP IN GHOST WINDOW ---
+// Forces the mouse wheel to scroll the PAGE instead of the box, 
+// requiring the user to use the scrollbar/slider to scroll the box itself.
+ghostWindow.addEventListener('wheel', (e) => {
+    // Prevent the default scroll behavior of the box
+    e.preventDefault();
+    // Manually scroll the window instead
+    window.scrollBy({
+        top: e.deltaY,
+        behavior: 'auto' 
+    });
+}, { passive: false });
+
+// --- 4. WORKFLOW SIMULATOR (Top Right) ---
+function runWorkflow() {
+    const btn = document.getElementById('wf-btn');
+    const nodes = ['node1', 'node2', 'node3'];
+    const pipes = ['pipe1', 'pipe2'];
+    
+    if(btn.disabled) return;
+
+    btn.disabled = true;
+    btn.innerHTML = `<i class="fas fa-circle-notch fa-spin mr-2"></i> EXECUTING...`;
+    btn.classList.add('opacity-50', 'cursor-not-allowed');
+    
+    // Reset styles
+    nodes.forEach(n => {
+        const el = document.getElementById(n);
+        el.classList.remove('border-blue-500', 'text-blue-500', 'shadow-[0_0_15px_#1e90ff]');
+        el.classList.add('border-gray-700', 'text-gray-600');
+    });
+
+    // Step 1
+    const n1 = document.getElementById('node1');
+    n1.classList.replace('border-gray-700', 'border-blue-500');
+    n1.classList.replace('text-gray-600', 'text-blue-500');
+    n1.classList.add('shadow-[0_0_15px_#1e90ff]');
+    document.getElementById('pipe1').style.animation = "flow 0.6s linear forwards";
+
+    // Step 2
+    setTimeout(() => {
+        const n2 = document.getElementById('node2');
+        n2.classList.replace('border-gray-700', 'border-blue-500');
+        n2.classList.replace('text-gray-600', 'text-blue-500');
+        n2.classList.add('shadow-[0_0_15px_#1e90ff]');
+        document.getElementById('pipe2').style.animation = "flow 0.6s linear forwards";
+    }, 600);
+
+    // Step 3 & Action
+    setTimeout(() => {
+        const n3 = document.getElementById('node3');
+        n3.classList.replace('border-gray-700', 'border-blue-500');
+        n3.classList.replace('text-gray-600', 'text-blue-500');
+        n3.classList.add('shadow-[0_0_15px_#1e90ff]');
+        
+        btn.innerText = "ACCESS GRANTED - OPENING MAIL";
+        btn.classList.replace('text-blue-500', 'text-white');
+        btn.classList.replace('bg-blue-900/10', 'bg-blue-600');
+        
+    setTimeout(() => {
+        window.location.href = "mailto:me@alexrussell.io?subject=Portfolio%20Connection&body=Hey%20Alex,%20I%20ran%20your%20protocol.%20Let's%20chat.";
+        
+        setTimeout(() => {
+            btn.disabled = false;
+            btn.innerText = "[ INITIALIZE PROTOCOL ]";
+            btn.classList.remove('opacity-50', 'cursor-not-allowed', 'text-white', 'bg-blue-600');
+            btn.classList.add('text-green-500', 'bg-green-900/10');
+            document.getElementById('pipe1').style.animation = "none";
+            document.getElementById('pipe2').style.animation = "none";
+        }, 2000);
+    }, 1000);
+}, 1200);
+}
+
+// --- 5. LEFT PANEL LOGIC (Tabs & Chat) ---
+function switchTab(tab) {
+    const btnLogs = document.getElementById('tab-logs');
+    const btnChat = document.getElementById('tab-chat');
+    const contentLogs = document.getElementById('content-logs');
+    const contentChat = document.getElementById('content-chat');
+
+    if (tab === 'logs') {
+        // Active State for Logs
+        btnLogs.classList.add('text-green-400', 'bg-white/10', 'border-t', 'border-green-500');
+        btnLogs.classList.remove('text-gray-500');
+        
+        // Inactive State for Chat
+        btnChat.classList.add('text-gray-500');
+        btnChat.classList.remove('text-green-400', 'bg-white/10', 'border-t', 'border-green-500');
+
+        contentLogs.classList.remove('hidden');
+        contentChat.classList.add('hidden');
+    } else {
+        // Active State for Chat
+        btnChat.classList.add('text-green-400', 'bg-white/10', 'border-t', 'border-green-500');
+        btnChat.classList.remove('text-gray-500');
+
+        // Inactive State for Logs
+        btnLogs.classList.add('text-gray-500');
+        btnLogs.classList.remove('text-green-400', 'bg-white/10', 'border-t', 'border-green-500');
+
+        contentLogs.classList.add('hidden');
+        contentChat.classList.remove('hidden');
+    }
+}
+
+function askQuestion(type) {
+    const history = document.getElementById('chat-history');
+    let question = "";
+    let answer = "";
+
+    if (type === 'who') {
+        question = "Who is Alexander?";
+        answer = "Alexander Russell is an AI Engineer specializing in Agentic AI and Voice Systems. He builds scalable automation tools that drive business efficiency.";
+    } else if (type === 'stack') {
+        question = "What is his tech stack?";
+        answer = "Alexander's core stack includes Python, React.js, Vapi (Voice AI), Supabase, and n8n for workflow automation.";
+    } else if (type === 'contact') {
+        question = "How do I contact him?";
+        answer = "You can email him at me@alexrussell.io or run the Contact Protocol on the right!";
+    }
+
+    // Append Question
+    const qEl = document.createElement('div');
+    qEl.className = "mb-2 text-right";
+    qEl.innerHTML = `<span class="text-gray-400">> ${question}</span>`;
+    history.appendChild(qEl);
+
+    // Simulate Typing Delay
+    setTimeout(() => {
+        const aEl = document.createElement('div');
+        aEl.className = "mb-4";
+        aEl.innerHTML = `<span class="text-green-500">ALEX_AGENT ></span> ${answer}`;
+        history.appendChild(aEl);
+        history.scrollTop = history.scrollHeight;
+    }, 500);
+    
+    history.scrollTop = history.scrollHeight;
+}
+

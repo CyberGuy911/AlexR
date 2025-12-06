@@ -1,0 +1,178 @@
+/* --- GLOBAL TERMINAL STYLE --- */
+:root {
+    --terminal-green: #00FF00;
+    --terminal-dim: #cccccc;
+    --bg-black: #000000;
+    --bg-gradient-start: #000000;
+    --bg-gradient-end: #050A14; /* Deep Blue */
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+}
+
+body {
+    background: linear-gradient(to bottom right, var(--bg-gradient-start), var(--bg-gradient-end));
+    background-attachment: fixed; /* Keeps gradient consistent */
+    color: var(--terminal-dim);
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    line-height: 1.8; /* Increased from 1.6 for readability */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* SPOTLIGHT EFFECT */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    /* Changed to blue as requested */
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(0, 100, 255, 0.08), transparent 40%);
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0; /* Hidden by default, shown via JS */
+    transition: opacity 0.5s ease;
+}
+
+/* SPOTLIGHT TOGGLE CLASS */
+body.spotlight-visible::before {
+    opacity: 1;
+}
+
+/* --- VISUALS & ANIMATIONS --- */
+.glass-panel {
+    background: rgba(10, 15, 25, 0.7); /* Slightly blue-tinted glass */
+    border: 1px solid rgba(0, 255, 0, 0.15);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.03); 
+    backdrop-filter: blur(5px);
+}
+
+/* Signal Beacon Animation */
+.signal-beacon {
+    width: 12px;
+    height: 12px;
+    background-color: var(--terminal-green);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--terminal-green);
+    animation: pulse-beacon 2s infinite;
+    display: inline-block;
+}
+@keyframes pulse-beacon {
+    0% { opacity: 1; transform: scale(1); box-shadow: 0 0 10px var(--terminal-green); }
+    50% { opacity: 0.4; transform: scale(0.8); box-shadow: 0 0 2px var(--terminal-green); }
+    100% { opacity: 1; transform: scale(1); box-shadow: 0 0 10px var(--terminal-green); }
+}
+
+/* Workflow Flow Animation */
+@keyframes flow {
+    0% { left: 0; width: 0; opacity: 1; }
+    100% { left: 0; width: 100%; opacity: 1; }
+}
+
+/* Hacker Links */
+a { color: var(--terminal-green); text-decoration: underline; transition: all 0.2s; }
+a:hover { background-color: var(--terminal-green); color: black; text-decoration: none; }
+
+/* Header Buttons */
+.header-btn {
+    border: 1px solid var(--terminal-green);
+    color: var(--terminal-green);
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    background: rgba(0,0,0,0.5);
+}
+.header-btn:hover {
+    background: var(--terminal-green);
+    color: black;
+    box-shadow: 0 0 15px var(--terminal-green);
+    cursor: pointer;
+}
+
+/* Typography */
+h1, h3, h4 { color: var(--terminal-green); font-weight: bold; }
+h1 { letter-spacing: -1px; }
+h1::before { content: "# "; }
+
+/* UPDATED SECTION HEADINGS */
+h2 { 
+    color: white; /* Changed from green to white as requested */
+    margin-top: 5rem; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
+    padding-bottom: 1rem; 
+    margin-bottom: 2.5rem; 
+    font-size: 2.25rem; /* text-4xl equivalent roughly */
+    line-height: 2.5rem;
+    letter-spacing: -0.5px; 
+    text-transform: uppercase;
+    font-weight: bold; 
+}
+h2::before { content: "> "; color: var(--terminal-green); }
+
+/* Section Dividers for Resume Feel */
+.job-block { border-left: 2px solid #1a1a1a; padding-left: 2rem; margin-bottom: 4rem; position: relative; }
+.job-block:hover { border-left-color: var(--terminal-green); transition: border-color 0.3s ease; }
+
+/* Cert Card Link Style */
+.cert-card {
+    text-decoration: none !important;
+    display: block;
+}
+.cert-card:hover {
+    background-color: rgba(0, 255, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Sticky Nav Transition */
+#sticky-nav {
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background-color: #050a14; /* Deep Dark Blue */
+}
+#sticky-nav.visible {
+    transform: translateY(0);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #222; }
+::-webkit-scrollbar-thumb:hover { background: var(--terminal-green); }
+
+/* Blinking Cursor */
+.terminal-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 16px;
+    background-color: var(--terminal-green);
+    animation: blink-cursor 1s step-end infinite;
+    margin-left: 4px;
+}
+@keyframes blink-cursor {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Contact Protocol Flicker Animation */
+.flicker-blue-green {
+    animation: flicker-color 1.5s infinite;
+}
+@keyframes flicker-color {
+    0%, 49% { color: #1e90ff; } /* Blue */
+    50%, 100% { color: #00ff00; } /* Green */
+}
+
+/* Eleven Labs AI Voice Widget */
+elevenlabs-convai {
+    z-index: 9999 !important;
+    --font-family: 'JetBrains Mono', 'Courier New', monospace !important;
+    font-family: 'JetBrains Mono', 'Courier New', monospace !important;
+}
+
