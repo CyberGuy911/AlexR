@@ -167,6 +167,15 @@ h2::before { content: "> "; color: var(--terminal-green); }
     transform: translateY(0);
 }
 
+/* Sticky Nav Name Link - Override default link styles */
+#sticky-nav a[onclick*="scrollToTop"] {
+    text-decoration: none !important;
+}
+#sticky-nav a[onclick*="scrollToTop"]:hover {
+    background: none !important;
+    color: inherit !important;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: #000; }

@@ -1,3 +1,11 @@
+// --- SCROLL TO TOP FUNCTION (For Sticky Header Name Click) ---
+function scrollToTop(event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Remove hash from URL
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+}
+
 // --- MOUSE TRACKING FOR SPOTLIGHT ---
 const spotlightEl = document.body; // We toggle opacity on body::before
 // Since pseudo-elements can't be directly accessed, we'll use a class or just rely on the variable
@@ -164,7 +172,7 @@ function runWorkflow() {
         
         setTimeout(() => {
             btn.disabled = false;
-            btn.innerText = "[ INITIALIZE PROTOCOL ]";
+            btn.innerHTML = "[\u00A0Initialize Protocol\u00A0]";
             btn.classList.remove('opacity-50', 'cursor-not-allowed', 'text-white', 'bg-blue-600');
             btn.classList.add('text-green-500', 'bg-green-900/10');
             document.getElementById('pipe1').style.animation = "none";
