@@ -221,10 +221,10 @@ function askQuestion(type) {
 
     if (type === 'who') {
         question = "Who is Alexander?";
-        answer = "Alexander Russell is an AI Engineer specializing in Agentic AI and Voice Systems. He builds scalable automation tools that drive business efficiency.";
+        answer = "Alexander is an AI Engineer and Systems Architect who bridges technical execution with business strategy. He has been automating professionally since 2022 and currently serves as a contract AI Engineer for Harkness AI and a Technical Member of the AI Forum NZ.";
     } else if (type === 'stack') {
         question = "What is his tech stack?";
-        answer = "Alexander's core stack includes Python, React.js, Vapi (Voice AI), Supabase, and n8n for workflow automation.";
+        answer = "He leverages a multi-model intelligence layer using OpenAI, Claude, and Gemini. His infrastructure is architected around Vertex AI, Vapi, and Supabase, orchestrated through Next.js and Python for scalable production systems.";
     } else if (type === 'contact') {
         question = "How do I contact him?";
         answer = "You can email him at me@alexrussell.io or run the Contact Protocol on the right!";
