@@ -88,6 +88,12 @@
                         <!-- Scanline -->
                         <div class="absolute inset-0 bg-[linear-gradient(transparent_50%,_rgba(0,255,0,0.05)_50%)] bg-[length:100%_4px] pointer-events-none"></div>
                     </div>
+                    
+                    <!-- Online Status Indicator (DISABLED - Uncomment to enable) -->
+                    <!-- <div class="absolute bottom-4 right-4 w-7 h-7 z-20 flex items-center justify-center">
+                        <span class="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping"></span>
+                        <span class="relative inline-flex rounded-full h-7 w-7 bg-green-500 border-4 border-black shadow-[0_0_15px_#00ff00]"></span>
+                    </div> -->
                 </div>
 
             </div>
@@ -201,6 +207,42 @@
         </div>
     </header>
 
+    <!-- ======================= -->
+    <!-- TRUST SIGNAL: AI FORUM  -->
+    <!-- ======================= -->
+    <div class="max-w-5xl mx-auto px-4 -mt-10 relative z-20 mb-20">
+        <div class="glass border border-transparent bg-black/60 rounded-2xl p-1 flex items-center justify-between hover:shadow-[0_0_30px_rgba(0,255,65,0.15)] overflow-hidden group hover:border-green-500 transition-all duration-500">
+            
+            <!-- Animated Glow Behind -->
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-green-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
+
+            <div class="flex flex-col md:flex-row items-center w-full p-6 gap-6 md:gap-8">
+                
+                <!-- LOGO AREA -->
+                <div class="flex-shrink-0 w-auto h-auto md:w-24 md:h-24 bg-white rounded-xl flex items-center justify-center p-4 md:p-2 shadow-lg">
+                    <!-- Ensure you have the image saved as images/AIForum.png -->
+                    <img src="images/AIForum.png" alt="AI Forum NZ" class="w-auto h-16 md:w-full md:h-full object-contain">
+                </div>
+
+                <!-- TEXT AREA -->
+                <div class="flex-1 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start gap-3 mb-1">
+                        <h3 class="text-white text-lg md:text-xl font-bold tracking-wide">AI FORUM NEW ZEALAND</h3>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-green-500 text-black font-bold uppercase tracking-widest">Contributer</span>
+                    </div>
+                    
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                        Selected Contributor to the <strong class="text-white">LLM Working Group</strong>. 
+                        Advancing national standards for <span class="text-green-400">Agentic AI</span> and <span class="text-green-400">Data Sovereignty</span> in Aotearoa.
+                    </p>
+                </div>
+
+                <!-- ACTION ARROW (Visual only) -->
+                <!-- Removed per request -->
+            </div>
+        </div>
+    </div>
+
     <!-- ============================================ -->
     <!-- PART 2: MAIN CONTENT (Resume Data)           -->
     <!-- ============================================ -->
@@ -214,7 +256,7 @@
                 <div class="md:col-span-2">
                     <h1 class="text-3xl md:text-5xl mb-6 tracking-tight font-bold">whois alexander_russell</h1>
                     <p class="text-base md:text-xl leading-loose mb-6 text-gray-300 font-light">
-                        I am an AI Engineer and Systems Architect focused on building tools that drive operational speed. 
+                        I am an AI Engineer and Systems Architect focused on building tools that drive operational speed. Automating professionally since 2022. 
                         My approach combines the <strong class="text-white font-medium">technical rigour of Computer Science</strong> with the <strong class="text-white font-medium">business logic of Information Systems</strong> to create secure and scalable automation.
                     </p>
                     <p class="text-sm md:text-base text-gray-400 mb-6 leading-loose">
@@ -246,39 +288,39 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
                 
                 <!-- Col 1 -->
-                <div class="border border-gray-800 bg-gray-900/30 p-6 rounded-lg hover:bg-gray-900/50 transition">
-                    <strong class="text-green-500 block mb-4 font-mono uppercase border-b border-gray-700 pb-3 tracking-widest">AI & Agentic</strong>
-                    <ul class="space-y-3 text-gray-400 font-mono text-xs md:text-sm">
-                        <li class="flex items-center gap-2"><span class="text-green-500">>></span> Vapi (Voice AI)</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">>></span> OpenAI / LLMs</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">>></span> MS Copilot Studio</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">>></span> RAG Pipelines</li>
-                        <li class="flex items-center gap-2"><span class="text-green-500">>></span> Prompt Engineering</li>
-                    </ul>
+                <div class="skill-category animated-border-box">
+                    <h3 class="skill-category-title">AI & Agentic</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Vapi (Voice AI)</span>
+                        <span class="skill-tag">OpenAI / LLMs</span>
+                        <span class="skill-tag">MS Copilot Studio</span>
+                        <span class="skill-tag">RAG Pipelines</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                    </div>
                 </div>
 
                 <!-- Col 2 -->
-                <div class="border border-gray-800 bg-gray-900/30 p-6 rounded-lg hover:bg-gray-900/50 transition">
-                    <strong class="text-blue-400 block mb-4 font-mono uppercase border-b border-gray-700 pb-3 tracking-widest">Full Stack</strong>
-                    <ul class="space-y-3 text-gray-400 font-mono text-xs md:text-sm">
-                        <li class="flex items-center gap-2"><span class="text-blue-500">>></span> React.js / Next.js</li>
-                        <li class="flex items-center gap-2"><span class="text-blue-500">>></span> Supabase (RLS/Auth)</li>
-                        <li class="flex items-center gap-2"><span class="text-blue-500">>></span> Firebase</li>
-                        <li class="flex items-center gap-2"><span class="text-blue-500">>></span> SQL / Postgres</li>
-                        <li class="flex items-center gap-2"><span class="text-blue-500">>></span> Vercel Deployment</li>
-                    </ul>
+                <div class="skill-category animated-border-box" style="--skill-accent: #60a5fa;">
+                    <h3 class="skill-category-title">Full Stack</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React.js / Next.js</span>
+                        <span class="skill-tag">Supabase (RLS/Auth)</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">SQL / Postgres</span>
+                        <span class="skill-tag">Vercel Deployment</span>
+                    </div>
                 </div>
 
                 <!-- Col 3 -->
-                <div class="border border-gray-800 bg-gray-900/30 p-6 rounded-lg hover:bg-gray-900/50 transition">
-                    <strong class="text-purple-400 block mb-4 font-mono uppercase border-b border-gray-700 pb-3 tracking-widest">Automation & Ops</strong>
-                    <ul class="space-y-3 text-gray-400 font-mono text-xs md:text-sm">
-                        <li class="flex items-center gap-2"><span class="text-purple-500">>></span> Python Scripting</li>
-                        <li class="flex items-center gap-2"><span class="text-purple-500">>></span> n8n Workflows</li>
-                        <li class="flex items-center gap-2"><span class="text-purple-500">>></span> VBA / Macros</li>
-                        <li class="flex items-center gap-2"><span class="text-purple-500">>></span> Git / GitHub</li>
-                        <li class="flex items-center gap-2"><span class="text-purple-500">>></span> Linux (Kali)</li>
-                    </ul>
+                <div class="skill-category animated-border-box" style="--skill-accent: #c084fc;">
+                    <h3 class="skill-category-title">Automation & Ops</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python Scripting</span>
+                        <span class="skill-tag">n8n Workflows</span>
+                        <span class="skill-tag">VBA / Macros</span>
+                        <span class="skill-tag">Git / GitHub</span>
+                        <span class="skill-tag">Linux (Kali)</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -298,18 +340,19 @@
                     
                     <div class="flex-1">
                         <div class="flex flex-col md:flex-row justify-between mb-2">
-                            <h3 class="text-white text-xl font-bold tracking-wide">AI Specialist (Contract) | Remote</h3>
-                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit">Aug 2025 – Present</span>
+                            <h3 class="text-white text-xl font-bold tracking-wide">AI Engineer (Contract) | Remote</h3>
+                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit w-fit whitespace-nowrap">Aug 2025 – Present</span>
                         </div>
                         <p class="text-base text-gray-400 italic font-medium">Harkness AI</p>
                     </div>
                 </div>
                 
-                <p class="text-base text-gray-300 mb-6 mt-4 leading-relaxed max-w-3xl">Designing bespoke Agentic AI workflows and secure cloud architectures for business clients.</p>
+                <p class="text-base text-gray-300 mb-6 mt-4 leading-relaxed max-w-3xl">Leading the technical architecture and delivery of Agentic AI workflows and secure cloud infrastructure for business clients.</p>
                 <ul class="list-disc list-inside space-y-3 text-sm md:text-base text-gray-400 marker:text-green-500">
-                    <li class="pl-2"><strong class="text-white">Enterprise Voice Ecosystem:</strong> Engineered a real-time conversational system using <strong>Vapi</strong> and <strong>Supabase</strong> to log call logistics and analytics.</li>
-                    <li class="pl-2"><strong class="text-white">Secure Heritage Platform:</strong> Led backend migration for a secure heritage preservation platform. Implemented complex <strong> Row-Level Security (RLS) </strong> to ensure strict data privacy for sensitive elder histories.</li>
-                    <li class="pl-2"><strong class="text-white">RAG Tender Automation:</strong> Built workflows querying vector databases to draft stylistically accurate tender responses.</li>
+                    <li class="pl-2"><strong class="text-white">Multimodal Clinical Platform:</strong> Architected a secure Next.js app to solve "patient story fatigue." Replaced traditional transcription with a Gemini Native Multimodal workflow to capture audio emotion and generate empathetic summaries.</li>
+                    <li class="pl-2"><strong class="text-white">Enterprise Voice Ecosystem:</strong> Engineered a real-time conversational system using Vapi. Integrated this with a custom React Analytics Dashboard for live performance monitoring.</li>
+                    <li class="pl-2"><strong class="text-white">Agentic Tender Automation:</strong> Built a multi-agent RAG workflow using AutoHive, n8n, and MCP to query vector databases and autonomously draft commercial tenders.</li>
+                    <li class="pl-2"><strong class="text-white">Secure Heritage Platform:</strong> Led the backend migration for a sensitive Elder Knowledge app. Implemented complex Row-Level Security (RLS) in Supabase to guarantee strict data sovereignty.</li>
                 </ul>
             </div>
 
@@ -325,7 +368,7 @@
                     <div class="flex-1">
                         <div class="flex flex-col md:flex-row justify-between mb-2">
                             <h3 class="text-white text-xl font-bold tracking-wide">Founder & Lead Engineer</h3>
-                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit">Dec 2024 – Present</span>
+                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit w-fit whitespace-nowrap">Dec 2024 – Present</span>
                         </div>
                         <p class="text-base text-gray-400 italic font-medium">StudyPoints</p>
                     </div>
@@ -349,7 +392,7 @@
                     <div class="flex-1">
                         <div class="flex flex-col md:flex-row justify-between mb-2">
                             <h3 class="text-white text-xl font-bold tracking-wide">Residential Advisor</h3>
-                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit">Jan 2024 – Dec 2024</span>
+                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit w-fit whitespace-nowrap">Jan 2024 – Dec 2024</span>
                         </div>
                         <p class="text-base text-gray-400 italic font-medium">UniLodge (University of Canterbury)</p>
                     </div>
@@ -376,7 +419,7 @@
                     <div class="flex-1">
                         <div class="flex flex-col md:flex-row justify-between mb-2">
                             <h3 class="text-white text-xl font-bold tracking-wide">Process Automation Lead</h3>
-                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit">2021 – 2023</span>
+                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit w-fit whitespace-nowrap">December 2021 – May 2023</span>
                         </div>
                         <p class="text-base text-gray-400 italic font-medium">IJG Trails</p>
                     </div>
@@ -396,7 +439,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     
                     <!-- Leadership Card 1 -->
-                    <div class="glass-panel p-6 relative group transition-all duration-300 hover:border-green-500/30">
+                    <div class="glass-panel p-6 relative group transition-all duration-300 animated-border-box">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
                             <div>
                                 <strong class="text-white text-lg block">President</strong>
@@ -409,7 +452,7 @@
                     </div>
 
                     <!-- Leadership Card 2 -->
-                    <div class="glass-panel p-6 relative group transition-all duration-300 hover:border-green-500/30">
+                    <div class="glass-panel p-6 relative group transition-all duration-300 animated-border-box">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
                             <div>
                                 <strong class="text-white text-lg block">International Student Ambassador</strong>
@@ -440,7 +483,7 @@
                     <div class="flex-1">
                         <div class="flex flex-col md:flex-row justify-between mb-2">
                             <h3 class="text-white text-xl font-bold tracking-wide">B.Sc Computer Science (Major)</h3>
-                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit">July 2023 – June 2026</span>
+                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit w-fit whitespace-nowrap">July 2023 – June 2026</span>
                         </div>
                         <p class="text-base text-gray-400 italic font-medium">University of Canterbury | Info Systems (Minor)</p>
                     </div>
@@ -480,7 +523,7 @@
                     <div class="flex-1">
                         <div class="flex flex-col md:flex-row justify-between mb-2">
                             <h3 class="text-white text-xl font-bold tracking-wide">National Senior Certificate</h3>
-                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit">2021</span>
+                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit w-fit whitespace-nowrap">December 2021</span>
                         </div>
                         <p class="text-base text-gray-400 italic font-medium">Windhoek Afrikaans Private School</p>
                     </div>
@@ -498,7 +541,7 @@
             <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10">licenses_&_certs</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm font-mono">
                 
-                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 hover:border-green-500 transition duration-300 group rounded-lg">
+                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg">
                     <div class="flex items-center gap-4">
                         <!-- LOGO CIRCLE -->
                         <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-600 group-hover:border-green-500 transition">
@@ -512,7 +555,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 hover:border-green-500 transition duration-300 group rounded-lg">
+                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg">
                     <div class="flex items-center gap-4">
                         <!-- LOGO CIRCLE -->
                         <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-600 group-hover:border-green-500 transition">
@@ -526,7 +569,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 hover:border-green-500 transition duration-300 group rounded-lg">
+                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg">
                     <div class="flex items-center gap-4">
                         <!-- LOGO CIRCLE -->
                         <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-600 group-hover:border-green-500 transition">
@@ -540,7 +583,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 hover:border-green-500 transition duration-300 group rounded-lg">
+                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg">
                     <div class="flex items-center gap-4">
                         <!-- LOGO CIRCLE -->
                         <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-600 group-hover:border-green-500 transition">
