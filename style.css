@@ -243,7 +243,8 @@ elevenlabs-convai {
 }
 
 .no-touch-pan {
-    touch-action: none;
+    /* Allow vertical panning so mobile users can scroll the page while touching the ghost window */
+    touch-action: pan-y;
 }
 
 .animated-border-box::before,
