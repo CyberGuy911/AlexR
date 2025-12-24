@@ -293,107 +293,108 @@
         <section id="experience" class="mb-24 scroll-mt-32">
             <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10">experience_log</h2>
 
-            <!-- JOB 1 -->
-            <div class="job-block group">
-                <div class="flex items-center gap-5 mb-4">
-                    <!-- LOGO CONTAINER -->
-                    <div class="flex-shrink-0 w-24 h-24 bg-black border border-gray-800 rounded-lg p-2 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
-                        <!-- REMOVED GRAYSCALE -->
-                        <img src="images/Harkness.jpg" alt="Harkness AI" class="w-full h-full object-contain transition-all duration-300">
-                    </div>
-                    
-                    <div class="flex-1">
-                        <div class="flex flex-col md:flex-row justify-between mb-2">
-                            <h3 class="text-white text-xl font-bold tracking-wide">AI Engineer (Contract) | Remote</h3>
-                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit w-fit whitespace-nowrap">Aug 2025 – Present</span>
+            <div class="timeline">
+
+                <!-- JOB 1: HARKNESS AI -->
+                <div class="timeline-item group">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content animated-border-box">
+                        <div class="timeline-header">
+                            <h3 class="timeline-role">AI Engineer (Contract) | Remote</h3>
+                            <span class="timeline-date">Aug 2025 – Present</span>
                         </div>
-                        <p class="text-base text-gray-400 italic font-medium">Harkness AI</p>
+                        
+                        <div class="timeline-company">
+                            <div class="timeline-logo-container">
+                                <img src="images/Harkness.jpg" alt="Harkness AI" class="timeline-logo">
+                            </div>
+                            <span class="timeline-company-name">Harkness AI</span>
+                        </div>
+
+                        <p class="timeline-desc">Leading the technical architecture and delivery of Agentic AI workflows and secure cloud infrastructure for business clients.</p>
+                        
+                        <ul class="timeline-list">
+                            <li><strong class="text-white">Multimodal Clinical Platform:</strong> Architected a secure Next.js app to solve "patient story fatigue." Replaced traditional transcription with a Gemini Native Multimodal workflow to capture audio emotion and generate empathetic summaries.</li>
+                            <li><strong class="text-white">Enterprise Voice Ecosystem:</strong> Engineered a real-time conversational system using Vapi. Integrated this with a custom React Analytics Dashboard for live performance monitoring.</li>
+                            <li><strong class="text-white">Agentic Tender Automation:</strong> Built a multi-agent RAG workflow using AutoHive, n8n, and MCP to query vector databases and autonomously draft commercial tenders.</li>
+                            <li><strong class="text-white">Secure Heritage Platform:</strong> Led the backend migration for a sensitive Elder Knowledge app. Implemented complex Row-Level Security (RLS) in Supabase to guarantee strict data sovereignty.</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <p class="text-base text-gray-300 mb-6 mt-4 leading-relaxed max-w-3xl">Leading the technical architecture and delivery of Agentic AI workflows and secure cloud infrastructure for business clients.</p>
-                <ul class="list-disc list-inside space-y-3 text-sm md:text-base text-gray-400 marker:text-green-500">
-                    <li class="pl-2"><strong class="text-white">Multimodal Clinical Platform:</strong> Architected a secure Next.js app to solve "patient story fatigue." Replaced traditional transcription with a Gemini Native Multimodal workflow to capture audio emotion and generate empathetic summaries.</li>
-                    <li class="pl-2"><strong class="text-white">Enterprise Voice Ecosystem:</strong> Engineered a real-time conversational system using Vapi. Integrated this with a custom React Analytics Dashboard for live performance monitoring.</li>
-                    <li class="pl-2"><strong class="text-white">Agentic Tender Automation:</strong> Built a multi-agent RAG workflow using AutoHive, n8n, and MCP to query vector databases and autonomously draft commercial tenders.</li>
-                    <li class="pl-2"><strong class="text-white">Secure Heritage Platform:</strong> Led the backend migration for a sensitive Elder Knowledge app. Implemented complex Row-Level Security (RLS) in Supabase to guarantee strict data sovereignty.</li>
-                </ul>
-            </div>
 
-            <!-- JOB 2 -->
-            <div class="job-block group">
-                <div class="flex items-center gap-5 mb-4">
-                    <!-- LOGO CONTAINER -->
-                    <div class="flex-shrink-0 w-24 h-24 bg-black border border-gray-800 rounded-full p-2 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
-                        <!-- REMOVED GRAYSCALE -->
-                        <img src="images/Studypoints.png" alt="StudyPoints" class="w-full h-full object-contain transition-all duration-300">
-                    </div>
-
-                    <div class="flex-1">
-                        <div class="flex flex-col md:flex-row justify-between mb-2">
-                            <h3 class="text-white text-xl font-bold tracking-wide">Founder & Lead Engineer</h3>
-                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit w-fit whitespace-nowrap">Dec 2024 – Present</span>
+                <!-- JOB 2: STUDYPOINTS -->
+                <div class="timeline-item group">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content animated-border-box">
+                        <div class="timeline-header">
+                            <h3 class="timeline-role">Founder & Lead Engineer</h3>
+                            <span class="timeline-date">Dec 2024 – Present</span>
                         </div>
-                        <p class="text-base text-gray-400 italic font-medium">StudyPoints</p>
+                        
+                        <div class="timeline-company">
+                            <div class="timeline-logo-container rounded-full">
+                                <img src="images/Studypoints.png" alt="StudyPoints" class="timeline-logo">
+                            </div>
+                            <span class="timeline-company-name">StudyPoints</span>
+                        </div>
+                        
+                        <ul class="timeline-list">
+                            <li>Conceived and deployed a live full-stack SaaS (React/Firebase) solving the "re-watch problem" for students.</li>
+                            <li>Engineered an automated AI pipeline to synthesize lecture audio into structured study notes.</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <ul class="list-disc list-inside space-y-3 text-sm md:text-base text-gray-400 mt-4 marker:text-green-500">
-                    <li class="pl-2">Conceived and deployed a live full-stack SaaS (React/Firebase) solving the "re-watch problem" for students.</li>
-                    <li class="pl-2">Engineered an automated AI pipeline to synthesize lecture audio into structured study notes.</li>
-                </ul>
-            </div>
 
-            <!-- JOB 3: RESIDENTIAL ADVISOR -->
-            <div class="job-block group">
-                <div class="flex items-center gap-5 mb-4">
-                    <!-- LOGO CONTAINER -->
-                    <div class="flex-shrink-0 w-24 h-24 bg-black border border-gray-800 rounded-lg p-2 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
-                        <!-- Ensure images/UniLodge.jpg exists -->
-                        <img src="images/UniLodge.jpg" alt="UniLodge" class="w-full h-full object-contain transition-all duration-300">
-                    </div>
-
-                    <div class="flex-1">
-                        <div class="flex flex-col md:flex-row justify-between mb-2">
-                            <h3 class="text-white text-xl font-bold tracking-wide">Residential Advisor</h3>
-                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit w-fit whitespace-nowrap">Jan 2024 – Dec 2024</span>
+                <!-- JOB 3: RESIDENTIAL ADVISOR -->
+                <div class="timeline-item group">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content animated-border-box">
+                        <div class="timeline-header">
+                            <h3 class="timeline-role">Residential Advisor</h3>
+                            <span class="timeline-date">Jan 2024 – Dec 2024</span>
                         </div>
-                        <p class="text-base text-gray-400 italic font-medium">UniLodge (University of Canterbury)</p>
+                        
+                        <div class="timeline-company">
+                            <div class="timeline-logo-container">
+                                <img src="images/UniLodge.jpg" alt="UniLodge" class="timeline-logo">
+                            </div>
+                            <span class="timeline-company-name">UniLodge (University of Canterbury)</span>
+                        </div>
+
+                        <p class="timeline-desc">Selected for a high-responsibility pastoral care role, managing the welfare and integration of 30 first-year students alongside full-time study.</p>
+                        
+                        <ul class="timeline-list">
+                            <li><strong class="text-white">Crisis Management:</strong> First responder for student welfare issues, conflict resolution, and emergency protocols.</li>
+                            <li><strong class="text-white">Stakeholder Management:</strong> Acted as the primary bridge between residents and university management, organizing events to foster community engagement.</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <p class="text-base text-gray-300 mb-6 mt-4 leading-relaxed max-w-3xl">
-                    Selected for a high-responsibility pastoral care role, managing the welfare and integration of 30 first-year students alongside full-time study.
-                </p>
-                <ul class="list-disc list-inside space-y-3 text-sm md:text-base text-gray-400 marker:text-green-500">
-                    <li class="pl-2"><strong class="text-white">Crisis Management:</strong> First responder for student welfare issues, conflict resolution, and emergency protocols.</li>
-                    <li class="pl-2"><strong class="text-white">Stakeholder Management:</strong> Acted as the primary bridge between residents and university management, organizing events to foster community engagement.</li>
-                </ul>
-            </div>
 
-            <!-- JOB 4 -->
-            <div class="job-block group">
-                <div class="flex items-center gap-5 mb-4">
-                    <!-- LOGO CONTAINER -->
-                    <div class="flex-shrink-0 w-24 h-24 bg-black border border-gray-800 rounded-lg p-2 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
-                        <!-- REMOVED GRAYSCALE -->
-                        <img src="images/IJG.png" alt="IJG Trails" class="w-full h-full object-contain transition-all duration-300">
-                    </div>
-
-                    <div class="flex-1">
-                        <div class="flex flex-col md:flex-row justify-between mb-2">
-                            <h3 class="text-white text-xl font-bold tracking-wide">Process Automation Lead</h3>
-                            <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit w-fit whitespace-nowrap">December 2021 – May 2023</span>
+                <!-- JOB 4: IJG TRAILS -->
+                <div class="timeline-item group">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content animated-border-box">
+                        <div class="timeline-header">
+                            <h3 class="timeline-role">Process Automation Lead</h3>
+                            <span class="timeline-date">December 2021 – May 2023</span>
                         </div>
-                        <p class="text-base text-gray-400 italic font-medium">IJG Trails</p>
+                        
+                        <div class="timeline-company">
+                            <div class="timeline-logo-container">
+                                <img src="images/IJG.png" alt="IJG Trails" class="timeline-logo">
+                            </div>
+                            <span class="timeline-company-name">IJG Trails</span>
+                        </div>
+
+                        <p class="timeline-desc">Transformed a manual data bottleneck into an automated workflow.</p>
+                        
+                        <ul class="timeline-list">
+                            <li>Built a custom <strong>VBA Automation Suite</strong> to clean data and dispatch Outlook emails.</li>
+                            <li><span class="text-green-500">>> RESULT:</span> Reduced daily processing time from 7 hours to < 2 hours (<strong class="text-green-500">71% Gain</strong>).</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <p class="text-base text-gray-300 mb-6 mt-4 leading-relaxed max-w-3xl">Transformed a manual data bottleneck into an automated workflow.</p>
-                <ul class="list-disc list-inside space-y-3 text-sm md:text-base text-gray-400 marker:text-green-500">
-                    <li class="pl-2">Built a custom <strong>VBA Automation Suite</strong> to clean data and dispatch Outlook emails.</li>
-                    <li class="pl-2"><span class="text-green-500">>> RESULT:</span> Reduced daily processing time from 7 hours to < 2 hours (<strong class="text-green-500">71% Gain</strong>).</li>
-                </ul>
+
             </div>
             
             <!-- LEADERSHIP SUMMARY (REFACTORED) -->
@@ -404,7 +405,7 @@
                 <!-- TRUST SIGNAL: AI FORUM  -->
                 <!-- ======================= -->
                 <div class="max-w-5xl mx-auto mb-10">
-                    <div class="glass border border-gray-700 bg-black/60 rounded-2xl p-1 flex items-center justify-between hover:shadow-[0_0_30px_rgba(0,255,65,0.15)] overflow-hidden group hover:border-green-500 transition-all duration-500">
+                    <div class="glass border border-gray-700 bg-black/60 rounded-2xl p-1 flex items-center justify-between hover:shadow-[0_0_30px_rgba(0,255,65,0.15)] overflow-hidden group hover:border-green-500 transition-all duration-500 relative">
                         
                         <!-- Animated Glow Behind -->
                         <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-green-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>

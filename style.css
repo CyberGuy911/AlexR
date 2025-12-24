@@ -337,3 +337,152 @@ elevenlabs-convai {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
 }
+
+/* --- TIMELINE EXPERIENCE (NEW) --- */
+.timeline {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* The vertical line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+    top: 0;
+    bottom: 0;
+    left: 20px; /* Adjust based on marker center */
+    margin-left: -1px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 50px; /* Space for line and marker */
+    margin-bottom: 3rem;
+}
+
+/* The marker (dot) */
+.timeline-marker {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 20px; /* Center with line */
+    top: 24px; /* Align with title roughly */
+    background-color: #000;
+    border: 2px solid var(--terminal-green);
+    border-radius: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+    background-color: var(--terminal-green);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+    transform: translateX(-50%) scale(1.2);
+}
+
+/* Timeline Content Box - Similar to Kevin's but with our Glassmorphism */
+.timeline-content {
+    background: rgba(10, 15, 25, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    border-color: var(--terminal-green);
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.timeline-role {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.timeline-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--terminal-green);
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    background: rgba(0, 255, 0, 0.1);
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    white-space: nowrap;
+}
+
+.timeline-company {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-logo-container {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: black;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.timeline-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.timeline-company-name {
+    font-size: 1.1rem;
+    color: #9ca3af; /* gray-400 */
+    font-weight: 500;
+}
+
+.timeline-desc {
+    color: #d1d5db; /* gray-300 */
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.timeline-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+    color: #9ca3af; /* gray-400 */
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.timeline-list li {
+    margin-bottom: 0.5rem;
+}
+
+.timeline-list li::marker {
+    color: var(--terminal-green);
+}
