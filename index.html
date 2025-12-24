@@ -5,35 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alexander Russell | AI Engineer & Consultant</title>
     
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     
-    <!-- Tailwind & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- External Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ============================================ -->
-    <!-- HIDDEN STICKY NAV (Dark Blue Header)         -->
-    <!-- ============================================ -->
     <nav id="sticky-nav" class="fixed top-0 left-0 w-full z-50 shadow-[0_4px_30px_rgba(0,0,0,0.8)] border-b border-gray-800">
-        <!-- Using w-full and px-6 to push content to edges -->
         <div class="w-full px-6 md:px-10 py-4 flex justify-between items-center">
             
-            <!-- LEFT: Bigger Name (Clickable to Return to Top) -->
             <div class="flex items-center gap-2">
                 <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#00ff00]"></div>
                 <a href="#" onclick="scrollToTop(event)" class="text-white font-bold tracking-tight text-base md:text-2xl font-mono no-underline cursor-pointer">ALEXANDER RUSSELL</a>
             </div>
 
-            <!-- RIGHT: Rounded, Big, Blue-Theme Button -->
-            <!-- Note: I made the button Green to pop against the Dark Blue header for recruiters, 
-                 but if you want the button itself blue, change 'bg-green-500' to 'bg-blue-600' -->
             <a href="mailto:me@alexrussell.io?subject=Inquiry%20from%20alexrussell.io&body=Hi%20Alexander%2C%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20discuss..." class="
                 bg-green-500 text-black 
                 hover:bg-white hover:text-black hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] 
@@ -48,29 +37,21 @@
         </div>
     </nav>
 
-    <!-- ============================================ -->
-    <!-- PART 1: TOP DASHBOARD (Interactive)          -->
-    <!-- ============================================ -->
     <header id="main-header" class="border-b border-gray-900 pb-16 mb-16 relative">
-        <!-- Optional Background Overlay if needed, otherwise body gradient shows -->
         
         <div class="max-w-7xl mx-auto px-6 pt-16">
             
-            <!-- HEADER INFO & PROFILE GRID -->
             <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 items-center mb-16">
                 
-                <!-- LEFT: Text & Stats -->
                 <div class="text-center md:text-left md:order-1">
                     <h1 class="text-5xl md:text-7xl text-white mb-4 !mt-0 before:!content-none tracking-tight font-extrabold">ALEXANDER RUSSELL</h1>
                     <p class="text-gray-400 text-sm md:text-lg tracking-[0.15em] uppercase mb-6 font-medium">AI Engineer (Agentic & Voice) | CS & InfoSystems</p>
                     
-                    <!-- Status Line with Flickering Beacon -->
                     <div class="flex items-center justify-center md:justify-start gap-4 mb-8 h-8">
                         <div class="signal-beacon w-3 h-3 md:w-4 md:h-4"></div>
                         <div id="status-line" class="text-green-500 font-mono text-xs md:text-base tracking-widest uppercase h-full flex items-center"></div>
                     </div>
 
-                    <!-- Header Action Buttons -->
                     <div class="flex flex-wrap gap-5 justify-center md:justify-start">
                         <a href="mailto:me@alexrussell.io?subject=Inquiry%20from%20alexrussell.io&body=Hi%20Alexander%2C%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20discuss..." class="header-btn px-6 py-3 text-sm md:text-base"><i class="fas fa-envelope mr-2"></i>Email</a>
                         <a href="https://www.linkedin.com/in/alexrussell-tech" target="_blank" class="header-btn px-6 py-3 text-sm md:text-base"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
@@ -78,14 +59,10 @@
                     </div>
                 </div>
 
-                <!-- RIGHT: Profile Image (New) -->
                 <div class="hidden md:block relative group md:order-2">
-                    <!-- Tech Ring/Border -->
                     <div class="absolute -inset-1 rounded-full bg-gradient-to-br from-green-500/40 to-blue-600/40 blur-sm group-hover:opacity-100 transition duration-500 opacity-60"></div>
                     <div class="w-48 h-48 rounded-full border-2 border-green-500/30 overflow-hidden relative bg-black shadow-[0_0_30px_rgba(0,255,0,0.1)]">
-                        <!-- REMOVED GRAYSCALE AND OPACITY -->
                         <img src="images/Alex11.jpg" alt="Alexander Russell" class="w-full h-full object-cover transition duration-500">
-                        <!-- Scanline -->
                         <div class="absolute inset-0 bg-[linear-gradient(transparent_50%,_rgba(0,255,0,0.05)_50%)] bg-[length:100%_4px] pointer-events-none"></div>
                     </div>
                     
@@ -98,22 +75,17 @@
 
             </div>
 
-            <!-- DASHBOARD GRID -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 h-auto md:h-[450px]">
                 
-                <!-- LEFT: GHOST CODER (Tabbed) -->
                 <div class="glass-panel flex flex-col relative overflow-hidden h-[300px] md:h-full">
                     
-                    <!-- TABS -->
                     <div class="flex items-center bg-black/40 border-b border-white/10 px-4 py-2 gap-4 overflow-x-auto scrollable-tabs">
-                        <!-- Window Controls -->
                         <div class="flex gap-2 mr-4 flex-shrink-0">
                             <div class="w-3 h-3 rounded-full bg-red-900"></div>
                             <div class="w-3 h-3 rounded-full bg-yellow-900"></div>
                             <div class="w-3 h-3 rounded-full bg-green-900"></div>
                         </div>
 
-                        <!-- Tab Buttons -->
                         <button onclick="switchTab('logs')" id="tab-logs" class="text-[10px] md:text-xs font-mono px-3 py-1 rounded transition-colors text-green-400 bg-white/10 border-t border-green-500 whitespace-nowrap flex-shrink-0">
                             ~/active_agent_v3.py
                         </button>
@@ -122,12 +94,10 @@
                         </button>
                     </div>
 
-                    <!-- CONTENT: LOGS (Default) -->
                     <div id="content-logs" class="p-5 h-full overflow-hidden relative">
                         <div id="ghost-code-window" class="text-[11px] md:text-xs text-green-500/90 font-mono overflow-y-auto h-full leading-relaxed whitespace-pre-wrap pb-8 no-touch-pan"></div>
                     </div>
 
-                    <!-- CONTENT: CHAT (Hidden) -->
                     <div id="content-chat" class="hidden p-5 h-full flex flex-col">
                         <div id="chat-history" class="flex-1 overflow-y-auto text-xs font-mono space-y-4 mb-4 pr-2 text-gray-300">
                             <div class="mb-2">
@@ -135,7 +105,6 @@
                             </div>
                         </div>
                         
-                        <!-- Pre-coded Options -->
                         <div class="grid grid-cols-1 gap-2">
                             <button onclick="askQuestion('who')" class="w-full text-left text-[10px] border border-gray-700 hover:border-green-500 hover:text-green-400 p-2 rounded bg-black/40 transition-colors">
                                 > Who is Alexander?
@@ -151,7 +120,6 @@
 
                 </div>
 
-                <!-- RIGHT: CONTACT / WORKFLOW -->
                 <div class="glass-panel p-8 flex flex-col justify-between h-[350px] md:h-full relative">
                     
                     <div class="text-center border-b border-white/10 pb-4">
@@ -160,9 +128,7 @@
                         </h3>
                     </div>
 
-                    <!-- Visualization Grid -->
                     <div class="flex items-center justify-between w-full px-2">
-                        <!-- Node 1 -->
                         <div class="flex flex-col items-center z-10 w-1/4">
                             <div id="node1" class="w-16 h-16 md:w-20 md:h-20 border-2 border-gray-700 rounded-lg flex items-center justify-center text-gray-600 bg-black transition-all duration-300">
                                 <i class="fas fa-envelope text-2xl md:text-3xl"></i>
@@ -170,12 +136,10 @@
                             <span class="text-[10px] text-gray-500 mt-2 font-mono uppercase tracking-wider">Inquiry</span>
                         </div>
 
-                        <!-- Pipe 1 -->
                         <div class="h-1 bg-gray-800 relative flex-1 mx-2 overflow-hidden rounded-full">
                             <div id="pipe1" class="absolute top-0 bottom-0 left-0 bg-blue-500 shadow-[0_0_10px_#1e90ff] opacity-0 w-0"></div>
                         </div>
 
-                        <!-- Node 2 -->
                         <div class="flex flex-col items-center z-10 w-1/4">
                             <div id="node2" class="w-16 h-16 md:w-20 md:h-20 border-2 border-gray-700 rounded-lg flex items-center justify-center text-gray-600 bg-black transition-all duration-300">
                                 <i class="fas fa-brain text-2xl md:text-3xl"></i>
@@ -183,12 +147,10 @@
                             <span class="text-[10px] text-gray-500 mt-2 font-mono uppercase tracking-wider">Processing</span>
                         </div>
 
-                        <!-- Pipe 2 -->
                         <div class="h-1 bg-gray-800 relative flex-1 mx-2 overflow-hidden rounded-full">
                             <div id="pipe2" class="absolute top-0 bottom-0 left-0 bg-blue-500 shadow-[0_0_10px_#1e90ff] opacity-0 w-0"></div>
                         </div>
 
-                        <!-- Node 3 -->
                         <div class="flex flex-col items-center z-10 w-1/4">
                             <div id="node3" class="w-16 h-16 md:w-20 md:h-20 border-2 border-gray-700 rounded-lg flex items-center justify-center text-gray-600 bg-black transition-all duration-300">
                                 <i class="fas fa-check text-2xl md:text-3xl"></i>
@@ -197,7 +159,6 @@
                         </div>
                     </div>
 
-                    <!-- Large Action Button -->
                     <button onclick="runWorkflow()" id="wf-btn" class="w-full py-4 border border-green-500 bg-green-900/10 text-green-500 hover:bg-green-500 hover:text-black hover:shadow-[0_0_20px_rgba(0,255,0,0.6)] transition-all duration-200 font-bold text-sm md:text-base tracking-[0.2em] uppercase rounded-sm mt-4">
                         [&#160;Initialize Protocol&#160;]
                     </button>
@@ -207,16 +168,11 @@
         </div>
     </header>
 
-    <!-- ============================================ -->
-    <!-- PART 2: MAIN CONTENT (Resume Data)           -->
-    <!-- ============================================ -->
     <main class="max-w-4xl mx-auto px-4 pb-10">
         
-        <!-- SECTION: ABOUT (CONSULTING PITCH) -->
         <section id="about-section" class="mb-24 scroll-mt-32">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
                 
-                <!-- Text Content -->
                 <div class="md:col-span-2">
                     <h1 class="text-3xl md:text-5xl mb-6 tracking-tight font-bold break-on-underscore">meet alexander_russell</h1>
                     <p class="text-base md:text-xl leading-loose mb-6 text-gray-300 font-light">
@@ -232,12 +188,9 @@
                     </div>
                 </div>
 
-                <!-- Profile Picture Placeholder -->
                 <div class="md:col-span-1 flex justify-center md:justify-start">
                     <div class="relative group w-full max-w-[280px]">
-                        <!-- Image Container -->
                         <div class="relative border border-green-500/50 hover:border-green-500 hover:shadow-[0_0_20px_rgba(0,255,0,0.5)] transition duration-300 overflow-hidden inline-block">
-                            <!-- REMOVED GRAYSCALE AND OPACITY -->
                             <img src="images/Alex2.jpg" alt="Alexander Russell" class="max-w-full h-auto max-h-[400px] block transition duration-500">
                         </div>
                         <div class="text-center mt-3 text-[10px] text-green-500 font-mono tracking-widest">[IMG: A_RUSSELL.JPG]</div>
@@ -246,13 +199,11 @@
             </div>
         </section>
 
-        <!-- SECTION: TECH STACK (BENTO) -->
         <section id="tech-stack" class="mb-24 scroll-mt-32">
             <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10 break-on-underscore">tech_stack</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+            <div class="flex flex-wrap justify-center md:grid md:grid-cols-3 gap-8 text-sm md:justify-items-stretch">
                 
-                <!-- Col 1 -->
-                <div class="skill-category animated-border-box">
+                <div class="skill-category animated-border-box w-[300px] max-w-full md:w-auto md:max-w-none">
                     <h3 class="skill-category-title">AI & Agentic</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Vapi (Voice AI)</span>
@@ -263,8 +214,7 @@
                     </div>
                 </div>
 
-                <!-- Col 2 -->
-                <div class="skill-category animated-border-box" style="--skill-accent: #60a5fa;">
+                <div class="skill-category animated-border-box w-[300px] max-w-full md:w-auto md:max-w-none" style="--skill-accent: #60a5fa;">
                     <h3 class="skill-category-title">Full Stack</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">React.js / Next.js</span>
@@ -275,8 +225,7 @@
                     </div>
                 </div>
 
-                <!-- Col 3 -->
-                <div class="skill-category animated-border-box" style="--skill-accent: #c084fc;">
+                <div class="skill-category animated-border-box w-[300px] max-w-full md:w-auto md:max-w-none" style="--skill-accent: #c084fc;">
                     <h3 class="skill-category-title">Automation & Ops</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Python Scripting</span>
@@ -289,13 +238,11 @@
             </div>
         </section>
 
-        <!-- SECTION: EXPERIENCE -->
         <section id="experience" class="mb-24 scroll-mt-32">
             <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10 break-on-underscore">experience_log</h2>
 
             <div class="timeline">
 
-                <!-- JOB 1: HARKNESS AI -->
                 <div class="timeline-item group">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content animated-border-box">
@@ -315,28 +262,23 @@
                         
                         <h4 class="text-white font-bold text-lg mt-6 mb-4">Key Projects:</h4>
                         
-                        <!-- KEY PROJECTS GRID -->
                         <div class="project-bubbles-grid">
                             
-                            <!-- Project 1 -->
                             <div class="project-bubble animated-border-box project-bubble--leadership-hover">
                                 <span class="project-bubble-title">Multimodal Clinical Platform</span>
                                 <p class="project-bubble-desc">Architected a secure Next.js app to solve "patient story fatigue." Replaced traditional transcription with a Gemini Native Multimodal workflow to capture audio emotion and generate empathetic summaries.</p>
                             </div>
 
-                            <!-- Project 2 -->
                             <div class="project-bubble animated-border-box project-bubble--leadership-hover">
                                 <span class="project-bubble-title">Enterprise Voice Ecosystem</span>
                                 <p class="project-bubble-desc">Engineered a real-time conversational system using Vapi. Integrated this with a custom React Analytics Dashboard for live performance monitoring.</p>
                             </div>
 
-                            <!-- Project 3 -->
                             <div class="project-bubble animated-border-box project-bubble--leadership-hover">
                                 <span class="project-bubble-title">Agentic Tender Automation</span>
                                 <p class="project-bubble-desc">Built a multi-agent RAG workflow using AutoHive, n8n, and MCP to query vector databases and autonomously draft commercial tenders.</p>
                             </div>
 
-                            <!-- Project 4 -->
                             <div class="project-bubble animated-border-box project-bubble--leadership-hover">
                                 <span class="project-bubble-title">Secure Heritage Platform</span>
                                 <p class="project-bubble-desc">Led the backend migration for a sensitive Elder Knowledge app. Implemented complex Row-Level Security (RLS) in Supabase to guarantee strict data sovereignty.</p>
@@ -346,7 +288,6 @@
                     </div>
                 </div>
 
-                <!-- JOB 2: STUDYPOINTS -->
                 <div class="timeline-item group">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content animated-border-box">
@@ -362,16 +303,13 @@
                             <span class="timeline-company-name">StudyPoints</span>
                         </div>
                         
-                        <!-- KEY PROJECTS GRID -->
                         <div class="project-bubbles-grid">
                             
-                            <!-- Project 1 -->
                             <div class="project-bubble">
                                 <span class="project-bubble-title">Live Full-Stack SaaS</span>
                                 <p class="project-bubble-desc">Conceived and deployed a live platform (React/Firebase) solving the "re-watch problem" for students, handling real-time data sync and authentication.</p>
                             </div>
 
-                            <!-- Project 2 -->
                             <div class="project-bubble">
                                 <span class="project-bubble-title">Automated AI Pipeline</span>
                                 <p class="project-bubble-desc">Engineered a pipeline to synthesize lecture audio into structured study notes, reducing revision time by turning raw audio into actionable content automatically.</p>
@@ -381,7 +319,6 @@
                     </div>
                 </div>
 
-                <!-- JOB 3: RESIDENTIAL ADVISOR -->
                 <div class="timeline-item group">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content animated-border-box">
@@ -406,7 +343,6 @@
                     </div>
                 </div>
 
-                <!-- JOB 4: IJG TRAILS -->
                 <div class="timeline-item group">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content animated-border-box">
@@ -439,28 +375,20 @@
 
             </div>
             
-            <!-- LEADERSHIP SUMMARY (REFACTORED) -->
             <div class="mt-12 pt-8 border-t border-gray-900">
                 <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10 !mt-8 break-on-underscore">leadership_&_community</h2>
                 
-                <!-- ======================= -->
-                <!-- TRUST SIGNAL: AI FORUM  -->
-                <!-- ======================= -->
                 <div class="max-w-5xl mx-auto mb-10">
                     <div class="glass border border-gray-700 bg-black/60 rounded-2xl p-1 flex items-center justify-between hover:shadow-[0_0_30px_rgba(0,255,65,0.15)] overflow-hidden group hover:border-green-500 transition-all duration-500 relative">
                         
-                        <!-- Animated Glow Behind -->
                         <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-green-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
 
                         <div class="flex flex-col items-center w-full p-6 gap-6">
                             
-                            <!-- LOGO AREA -->
                             <div class="flex-shrink-0 bg-white rounded-xl flex items-center justify-center p-4 shadow-lg">
-                                <!-- Ensure you have the image saved as images/AIForum.png -->
                                 <img src="images/AIForum.png" alt="AI Forum NZ" class="h-16 w-auto object-contain">
                             </div>
 
-                            <!-- TEXT AREA -->
                             <div class="flex-1 text-left md:text-center">
                                 <h3 class="text-white text-2xl md:text-3xl font-bold tracking-wide mb-2">AI FORUM NEW ZEALAND</h3>
                                 <div class="mb-4">
@@ -473,62 +401,50 @@
                                 </p>
                             </div>
 
-                            <!-- ACTION ARROW (Visual only) -->
-                            <!-- Removed per request -->
                         </div>
                     </div>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     
-                    <!-- Leadership Card 1 -->
                     <div class="glass-panel p-6 relative group transition-all duration-300 animated-border-box">
                         <div class="flex items-start gap-4">
-                            <!-- LOGO CONTAINER -->
                             <div class="flex-shrink-0 w-14 h-14 bg-black border border-gray-800 rounded-lg p-1 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
                                 <img src="images/AfroSoc.jpg" alt="African Society" class="w-full h-full object-contain">
                             </div>
 
                             <div class="flex-1 flex flex-col gap-3">
-                                <!-- Title & Date -->
                                 <div>
                                     <strong class="text-white text-lg block leading-tight">President</strong>
                                     <span class="text-xs text-green-500 font-mono border border-green-500/30 px-2 py-0.5 rounded bg-green-500/10 whitespace-nowrap h-fit w-fit inline-block mt-1">June 2025 – Present</span>
                                 </div>
                                 
-                                <!-- Org / Uni -->
                                 <div>
                                     <span class="text-gray-300 text-base block">African Society (AfroSoc)</span>
                                     <span class="text-gray-500 text-xs block font-medium uppercase">University of Canterbury</span>
                                 </div>
 
-                                <!-- Description -->
                                 <p class="text-sm text-gray-400 leading-relaxed">Lead executive team in strategic planning, budgeting, and club collaborations.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Leadership Card 2 -->
                     <div class="glass-panel p-6 relative group transition-all duration-300 animated-border-box">
                         <div class="flex items-start gap-4">
-                            <!-- LOGO CONTAINER -->
                             <div class="flex-shrink-0 w-14 h-14 bg-black border border-gray-800 rounded-lg p-1 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
                                 <img src="images/UniLodge.jpg" alt="UniLodge" class="w-full h-full object-contain">
                             </div>
                             
                             <div class="flex-1 flex flex-col gap-3">
-                                <!-- Title & Date -->
                                 <div>
                                     <strong class="text-white text-lg block leading-tight">International Student Ambassador</strong>
                                     <span class="text-xs text-green-500 font-mono border border-green-500/30 px-2 py-0.5 rounded bg-green-500/10 whitespace-nowrap h-fit w-fit inline-block mt-1">June 2025 – Present</span>
                                 </div>
 
-                                <!-- Org / Uni -->
                                 <div>
                                     <span class="text-gray-500 text-xs block font-medium uppercase">University of Canterbury</span>
                                 </div>
 
-                                <!-- Description -->
                                 <p class="text-sm text-gray-400 leading-relaxed">University representative managing logistics and cultural integration for global students.</p>
                             </div>
                         </div>
@@ -538,16 +454,12 @@
             </div>
         </section>
 
-        <!-- SECTION: EDUCATION -->
         <section id="education" class="mb-16 scroll-mt-32">
             <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10 break-on-underscore">education_&_achievements</h2>
             
-            <!-- UC -->
             <div class="job-block group">
                 <div class="flex items-center gap-5 mb-4">
-                    <!-- LOGO CONTAINER -->
-                    <div class="flex-shrink-0 w-14 h-14 bg-black border border-gray-800 rounded-lg p-2 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
-                        <!-- REMOVED GRAYSCALE -->
+                    <div class="flex-shrink-0 w-14 h-14 bg-black border border-gray-800 rounded-lg p-1 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
                         <img src="images/UC.jpg" alt="University of Canterbury" class="w-full h-full object-contain transition-all duration-300">
                     </div>
                     
@@ -560,7 +472,7 @@
                     </div>
                 </div>
                 
-                <ul class="list-disc list-inside text-sm md:text-base text-gray-400 marker:text-green-500 mt-4">
+                <ul class="timeline-list mt-4">
                     <li><strong class="text-white">Performance:</strong> Maintained <span class="text-green-500 font-bold">A-Grade Average</span> while managing a <span class="text-green-500">50% course overload</span> and leadership positions.</li>
                     <li><strong class="text-white">Hackathon highlight:</strong> Selected participant: <strong class="text-white">Deloitte x ServiceNow</strong> AI Hackathon (2025).</li>
                 </ul>
@@ -576,12 +488,9 @@
                 </div>
             </div>
 
-            <!-- HIGH SCHOOL -->
             <div class="job-block group">
                 <div class="flex items-center gap-5 mb-4">
-                    <!-- LOGO CONTAINER -->
-                    <div class="flex-shrink-0 w-14 h-14 bg-black border border-gray-800 rounded-lg p-2 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
-                        <!-- REMOVED GRAYSCALE -->
+                    <div class="flex-shrink-0 w-14 h-14 bg-black border border-gray-800 rounded-lg p-1 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
                         <img src="images/WAP.jpg" alt="Windhoek Afrikaans Private School" class="w-full h-full object-contain transition-all duration-300">
                     </div>
 
@@ -594,21 +503,19 @@
                     </div>
                 </div>
                 
-                <ul class="list-disc list-inside text-sm md:text-base text-gray-400 marker:text-green-500 mt-4">
+                <ul class="timeline-list mt-4">
                     <li>Graduated with <strong class="text-white">7 Distinctions (Straight A's)</strong>.</li>
                     <li>Achieved <strong class="text-white">90%</strong> in Computer Applications Tech (School Record).</li>
                 </ul>
             </div>
         </section>
 
-        <!-- SECTION: CERTIFICATIONS (Grid) -->
         <section id="certifications" class="mb-12 scroll-mt-32">
             <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10 break-on-underscore">licenses_&_certs</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm font-mono">
                 
                 <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg flex items-center">
                     <div class="flex items-center gap-4 w-full">
-                        <!-- LOGO CIRCLE -->
                         <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-600 group-hover:border-green-500 transition">
                             <img src="images/Microsoft.jpg" alt="Microsoft" class="w-full h-full object-cover">
                         </div>
@@ -650,7 +557,6 @@
 
                 <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg flex items-center">
                     <div class="flex items-center gap-4 w-full">
-                        <!-- LOGO CIRCLE -->
                         <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-600 group-hover:border-green-500 transition">
                             <img src="images/Microsoft.jpg" alt="Microsoft" class="w-full h-full object-cover">
                         </div>
@@ -665,7 +571,6 @@
             </div>
         </section>
 
-        <!-- FOOTER (CLEANED UP) -->
         <footer class="py-6 text-gray-700 font-mono border-t border-gray-900">
             <div class="flex items-center pl-4 text-sm">
                 <span class="text-green-500">$ let's get in touch [Me@AlexRussell.io] </span>
@@ -680,10 +585,8 @@
 
     </main>
 
-    <!-- External JavaScript -->
     <script src="script.js"></script>
 
-    <!-- Eleven Labs AI Voice Widget -->
     <elevenlabs-convai agent-id="agent_6501kbq091nefkfaea804fhs2xvd"></elevenlabs-convai>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 
