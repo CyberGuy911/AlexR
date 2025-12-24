@@ -229,12 +229,6 @@ h2::before { content: "> "; color: var(--terminal-green); }
     right: 16px;
     bottom: max(16px, env(safe-area-inset-bottom));
     z-index: 9999;
-    /* Don't block page interactions outside the actual widget UI */
-    pointer-events: none;
-}
-
-#elevenlabs-widget-host > elevenlabs-convai {
-    pointer-events: auto;
 }
 
 elevenlabs-convai {
