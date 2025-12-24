@@ -223,13 +223,8 @@ h2::before { content: "> "; color: var(--terminal-green); }
 }
 
 /* Eleven Labs AI Voice Widget */
-/* Keep the widget pinned to the viewport on mobile (avoids scroll/URL-bar snap) */
 elevenlabs-convai {
-    position: fixed !important;
-    right: 16px !important;
-    bottom: max(16px, env(safe-area-inset-bottom)) !important;
     z-index: 9999 !important;
-    display: block !important;
     --font-family: 'JetBrains Mono', 'Courier New', monospace !important;
     font-family: 'JetBrains Mono', 'Courier New', monospace !important;
 }
