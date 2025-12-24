@@ -121,6 +121,11 @@ ghostWindow.addEventListener('wheel', (e) => {
     });
 }, { passive: false });
 
+// Block touch panning inside the ghost window so mobile swipes don't fight the auto-typing
+ghostWindow.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+}, { passive: false });
+
 // --- 4. WORKFLOW SIMULATOR (Top Right) ---
 function runWorkflow() {
     const btn = document.getElementById('wf-btn');
@@ -247,4 +252,11 @@ function askQuestion(type) {
     
     history.scrollTop = history.scrollHeight;
 }
+
+// --- 6. Allow headings with underscores to wrap at underscores instead of mid-word ---
+const underscoreHeadings = document.querySelectorAll('.break-on-underscore');
+underscoreHeadings.forEach((el) => {
+    const text = el.textContent;
+    el.innerHTML = text.replace(/_/g, '_<wbr>');
+});
 

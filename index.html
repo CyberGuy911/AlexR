@@ -124,7 +124,7 @@
 
                     <!-- CONTENT: LOGS (Default) -->
                     <div id="content-logs" class="p-5 h-full overflow-hidden relative">
-                        <div id="ghost-code-window" class="text-[11px] md:text-xs text-green-500/90 font-mono overflow-y-auto h-full leading-relaxed whitespace-pre-wrap pb-8"></div>
+                        <div id="ghost-code-window" class="text-[11px] md:text-xs text-green-500/90 font-mono overflow-y-auto h-full leading-relaxed whitespace-pre-wrap pb-8 no-touch-pan"></div>
                     </div>
 
                     <!-- CONTENT: CHAT (Hidden) -->
@@ -218,7 +218,7 @@
                 
                 <!-- Text Content -->
                 <div class="md:col-span-2">
-                    <h1 class="text-3xl md:text-5xl mb-6 tracking-tight font-bold">whois alexander_russell</h1>
+                    <h1 class="text-3xl md:text-5xl mb-6 tracking-tight font-bold break-on-underscore">whois alexander_russell</h1>
                     <p class="text-base md:text-xl leading-loose mb-6 text-gray-300 font-light">
                         I am an AI Engineer and Systems Architect focused on building tools that drive operational speed. Automating professionally since 2022. 
                         My approach combines the <strong class="text-white font-medium">technical rigour of Computer Science</strong> with the <strong class="text-white font-medium">business logic of Information Systems</strong> to create secure and scalable automation.
@@ -248,7 +248,7 @@
 
         <!-- SECTION: TECH STACK (BENTO) -->
         <section id="tech-stack" class="mb-24 scroll-mt-32">
-            <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10">tech_stack</h2>
+            <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10 break-on-underscore">tech_stack</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
                 
                 <!-- Col 1 -->
@@ -291,7 +291,7 @@
 
         <!-- SECTION: EXPERIENCE -->
         <section id="experience" class="mb-24 scroll-mt-32">
-            <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10">experience_log</h2>
+            <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10 break-on-underscore">experience_log</h2>
 
             <div class="timeline">
 
@@ -313,29 +313,31 @@
 
                         <p class="timeline-desc">Leading the technical architecture and delivery of Agentic AI workflows and secure cloud infrastructure for business clients.</p>
                         
+                        <h4 class="text-white font-bold text-lg mt-6 mb-4">Key Projects:</h4>
+                        
                         <!-- KEY PROJECTS GRID -->
                         <div class="project-bubbles-grid">
                             
                             <!-- Project 1 -->
-                            <div class="project-bubble">
+                            <div class="project-bubble animated-border-box project-bubble--leadership-hover">
                                 <span class="project-bubble-title">Multimodal Clinical Platform</span>
                                 <p class="project-bubble-desc">Architected a secure Next.js app to solve "patient story fatigue." Replaced traditional transcription with a Gemini Native Multimodal workflow to capture audio emotion and generate empathetic summaries.</p>
                             </div>
 
                             <!-- Project 2 -->
-                            <div class="project-bubble">
+                            <div class="project-bubble animated-border-box project-bubble--leadership-hover">
                                 <span class="project-bubble-title">Enterprise Voice Ecosystem</span>
                                 <p class="project-bubble-desc">Engineered a real-time conversational system using Vapi. Integrated this with a custom React Analytics Dashboard for live performance monitoring.</p>
                             </div>
 
                             <!-- Project 3 -->
-                            <div class="project-bubble">
+                            <div class="project-bubble animated-border-box project-bubble--leadership-hover">
                                 <span class="project-bubble-title">Agentic Tender Automation</span>
                                 <p class="project-bubble-desc">Built a multi-agent RAG workflow using AutoHive, n8n, and MCP to query vector databases and autonomously draft commercial tenders.</p>
                             </div>
 
                             <!-- Project 4 -->
-                            <div class="project-bubble">
+                            <div class="project-bubble animated-border-box project-bubble--leadership-hover">
                                 <span class="project-bubble-title">Secure Heritage Platform</span>
                                 <p class="project-bubble-desc">Led the backend migration for a sensitive Elder Knowledge app. Implemented complex Row-Level Security (RLS) in Supabase to guarantee strict data sovereignty.</p>
                             </div>
@@ -427,8 +429,8 @@
                                 <span class="project-bubble-title">VBA Automation Suite</span>
                                 <p class="project-bubble-desc">Built a custom VBA Automation Suite to clean data and dispatch Outlook emails automatically.</p>
                             </div>
-                            <div class="project-bubble highlight">
-                                <span class="project-bubble-title text-green-500">>> 71% Efficiency Gain</span>
+                            <div class="project-bubble">
+                                <span class="project-bubble-title">>> 71% Efficiency Gain</span>
                                 <p class="project-bubble-desc">Reduced daily processing time from 7 hours to < 2 hours, saving approx. 25 hours per week.</p>
                             </div>
                         </div>
@@ -439,7 +441,7 @@
             
             <!-- LEADERSHIP SUMMARY (REFACTORED) -->
             <div class="mt-12 pt-8 border-t border-gray-900">
-                <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10 !mt-8">leadership_&_community</h2>
+                <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10 !mt-8 break-on-underscore">leadership_&_community</h2>
                 
                 <!-- ======================= -->
                 <!-- TRUST SIGNAL: AI FORUM  -->
@@ -453,13 +455,13 @@
                         <div class="flex flex-col items-center w-full p-6 gap-6">
                             
                             <!-- LOGO AREA -->
-                            <div class="flex-shrink-0 w-auto h-auto md:w-80 bg-white rounded-xl flex items-center justify-center p-6 shadow-lg">
+                            <div class="flex-shrink-0 bg-white rounded-xl flex items-center justify-center p-4 shadow-lg">
                                 <!-- Ensure you have the image saved as images/AIForum.png -->
-                                <img src="images/AIForum.png" alt="AI Forum NZ" class="w-auto h-20 md:w-full md:h-auto object-contain">
+                                <img src="images/AIForum.png" alt="AI Forum NZ" class="h-16 w-auto object-contain">
                             </div>
 
                             <!-- TEXT AREA -->
-                            <div class="flex-1 text-center">
+                            <div class="flex-1 text-left md:text-center">
                                 <h3 class="text-white text-2xl md:text-3xl font-bold tracking-wide mb-2">AI FORUM NEW ZEALAND</h3>
                                 <div class="mb-4">
                                     <span class="px-3 py-1 rounded text-sm font-mono bg-green-500 text-black font-bold uppercase tracking-widest">Contributor</span>
@@ -483,7 +485,7 @@
                     <div class="glass-panel p-6 relative group transition-all duration-300 animated-border-box">
                         <div class="flex items-start gap-4">
                             <!-- LOGO CONTAINER -->
-                            <div class="flex-shrink-0 w-16 h-16 bg-black border border-gray-800 rounded-lg p-1 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
+                            <div class="flex-shrink-0 w-14 h-14 bg-black border border-gray-800 rounded-lg p-1 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
                                 <img src="images/AfroSoc.jpg" alt="African Society" class="w-full h-full object-contain">
                             </div>
 
@@ -510,7 +512,7 @@
                     <div class="glass-panel p-6 relative group transition-all duration-300 animated-border-box">
                         <div class="flex items-start gap-4">
                             <!-- LOGO CONTAINER -->
-                            <div class="flex-shrink-0 w-16 h-16 bg-black border border-gray-800 rounded-lg p-1 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
+                            <div class="flex-shrink-0 w-14 h-14 bg-black border border-gray-800 rounded-lg p-1 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
                                 <img src="images/UniLodge.jpg" alt="UniLodge" class="w-full h-full object-contain">
                             </div>
                             
@@ -538,36 +540,30 @@
 
         <!-- SECTION: EDUCATION -->
         <section id="education" class="mb-16 scroll-mt-32">
-            <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10">education_&_achievements</h2>
+            <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10 break-on-underscore">education_&_achievements</h2>
             
             <!-- UC -->
             <div class="job-block group">
                 <div class="flex items-center gap-5 mb-4">
                     <!-- LOGO CONTAINER -->
-                    <div class="flex-shrink-0 w-24 h-24 bg-black border border-gray-800 rounded-lg p-2 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
+                    <div class="flex-shrink-0 w-14 h-14 bg-black border border-gray-800 rounded-lg p-2 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
                         <!-- REMOVED GRAYSCALE -->
                         <img src="images/UC.jpg" alt="University of Canterbury" class="w-full h-full object-contain transition-all duration-300">
                     </div>
                     
                     <div class="flex-1">
                         <div class="flex flex-col md:flex-row justify-between mb-2">
-                            <h3 class="text-white text-xl font-bold tracking-wide">B.Sc Computer Science (Major)</h3>
+                            <h3 class="text-white text-xl font-bold tracking-wide">B.Sc Computer Science and Information Systems</h3>
                             <span class="text-xs text-green-500 font-mono border border-green-500/30 px-3 py-1 rounded bg-green-500/10 h-fit w-fit whitespace-nowrap">July 2023 – June 2026</span>
                         </div>
-                        <p class="text-base text-gray-400 italic font-medium">University of Canterbury | Info Systems (Minor)</p>
+                        <p class="text-base text-gray-400 italic font-medium">University of Canterbury</p>
                     </div>
                 </div>
                 
-                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="bg-yellow-900/10 p-3 border border-yellow-600/30">
-                        <strong class="text-yellow-500 text-xs uppercase block mb-1">Performance</strong>
-                        <p class="text-sm text-gray-300">Maintained <span class="text-green-500 font-bold">A-Grade Average</span> while managing a <span class="text-green-500">50% course overload</span> and leadership positions.</p>
-                    </div>
-                    <div class="bg-green-900/10 p-3 border border-green-600/30">
-                        <strong class="text-green-500 text-xs uppercase block mb-1">Hackathon Highlight</strong>
-                        <p class="text-sm text-gray-300">Selected participant: <strong class="text-white">Deloitte x ServiceNow</strong> AI Hackathon (2025).</p>
-                    </div>
-                </div>
+                <ul class="list-disc list-inside text-sm md:text-base text-gray-400 marker:text-green-500 mt-4">
+                    <li><strong class="text-white">Performance:</strong> Maintained <span class="text-green-500 font-bold">A-Grade Average</span> while managing a <span class="text-green-500">50% course overload</span> and leadership positions.</li>
+                    <li><strong class="text-white">Hackathon highlight:</strong> Selected participant: <strong class="text-white">Deloitte x ServiceNow</strong> AI Hackathon (2025).</li>
+                </ul>
 
                 <div class="mt-4">
                     <strong class="text-gray-500 text-xs uppercase">Key Coursework Grades:</strong>
@@ -584,7 +580,7 @@
             <div class="job-block group">
                 <div class="flex items-center gap-5 mb-4">
                     <!-- LOGO CONTAINER -->
-                    <div class="flex-shrink-0 w-24 h-24 bg-black border border-gray-800 rounded-lg p-2 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
+                    <div class="flex-shrink-0 w-14 h-14 bg-black border border-gray-800 rounded-lg p-2 flex items-center justify-center shadow-lg group-hover:border-green-500/50 transition duration-300">
                         <!-- REMOVED GRAYSCALE -->
                         <img src="images/WAP.jpg" alt="Windhoek Afrikaans Private School" class="w-full h-full object-contain transition-all duration-300">
                     </div>
@@ -607,11 +603,11 @@
 
         <!-- SECTION: CERTIFICATIONS (Grid) -->
         <section id="certifications" class="mb-12 scroll-mt-32">
-            <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10">licenses_&_certs</h2>
+            <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10 break-on-underscore">licenses_&_certs</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm font-mono">
                 
-                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg">
-                    <div class="flex items-center gap-4">
+                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg flex items-center">
+                    <div class="flex items-center gap-4 w-full">
                         <!-- LOGO CIRCLE -->
                         <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-600 group-hover:border-green-500 transition">
                             <img src="images/Microsoft.jpg" alt="Microsoft" class="w-full h-full object-cover">
@@ -624,8 +620,8 @@
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg">
-                    <div class="flex items-center gap-4">
+                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg flex items-center">
+                    <div class="flex items-center gap-4 w-full">
                         <!-- LOGO CIRCLE -->
                         <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-600 group-hover:border-green-500 transition">
                             <img src="images/Harvard.jpg" alt="Harvard" class="w-full h-full object-cover">
@@ -638,8 +634,8 @@
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg">
-                    <div class="flex items-center gap-4">
+                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg flex items-center">
+                    <div class="flex items-center gap-4 w-full">
                         <!-- LOGO CIRCLE -->
                         <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-600 group-hover:border-green-500 transition">
                             <img src="images/Google.jpg" alt="Google" class="w-full h-full object-cover">
@@ -652,8 +648,8 @@
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg">
-                    <div class="flex items-center gap-4">
+                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg flex items-center">
+                    <div class="flex items-center gap-4 w-full">
                         <!-- LOGO CIRCLE -->
                         <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-600 group-hover:border-green-500 transition">
                             <img src="images/Microsoft.jpg" alt="Microsoft" class="w-full h-full object-cover">

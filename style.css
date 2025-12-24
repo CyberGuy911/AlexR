@@ -143,6 +143,11 @@ h2 {
 }
 h2::before { content: "> "; color: var(--terminal-green); }
 
+/* Allow titles with underscores to break at the underscore instead of mid-word */
+.break-on-underscore {
+    word-break: keep-all;
+}
+
 /* Section Dividers for Resume Feel */
 .job-block { border-left: 2px solid #1a1a1a; padding-left: 2rem; margin-bottom: 4rem; position: relative; }
 .job-block:hover { border-left-color: var(--terminal-green); transition: border-color 0.3s ease; }
@@ -235,6 +240,10 @@ elevenlabs-convai {
 .animated-border-box:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 30px -10px rgba(0, 255, 0, 0.3); /* Green tinted shadow */
+}
+
+.no-touch-pan {
+    touch-action: none;
 }
 
 .animated-border-box::before,
@@ -355,12 +364,14 @@ elevenlabs-convai {
     bottom: 0;
     left: 20px; /* Adjust based on marker center */
     margin-left: -1px;
+    z-index: 0; /* Default z-index */
 }
 
 .timeline-item {
     position: relative;
     padding-left: 50px; /* Space for line and marker */
     margin-bottom: 3rem;
+    z-index: 1; /* Ensure items are above the line's default if needed */
 }
 
 /* The marker (dot) */
@@ -373,7 +384,7 @@ elevenlabs-convai {
     background-color: #000;
     border: 2px solid var(--terminal-green);
     border-radius: 50%;
-    z-index: 1;
+    z-index: 2; /* Keep above line and box borders if needed */
     transform: translateX(-50%);
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
     transition: all 0.3s ease;
@@ -393,6 +404,7 @@ elevenlabs-convai {
     padding: 2rem;
     position: relative;
     transition: all 0.3s ease;
+    z-index: 1; /* Ensure content background covers line if opaque */
 }
 
 .timeline-item:hover .timeline-content {
@@ -519,6 +531,15 @@ elevenlabs-convai {
     transform: translateY(-2px);
 }
 
+/* Match Leadership card hover (President / International Student Ambassador) */
+.project-bubble--leadership-hover:hover {
+    /* Override default project-bubble hover so animated-border-box owns the effect */
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px -10px rgba(0, 255, 0, 0.3);
+}
+
 .project-bubble-title {
     color: white;
     font-weight: bold;
@@ -537,4 +558,42 @@ elevenlabs-convai {
 .project-bubble.highlight {
     border-color: rgba(0, 255, 0, 0.3);
     background: rgba(0, 255, 0, 0.05);
+}
+
+/* --- MOBILE OPTIMIZATIONS FOR TIMELINE --- */
+@media (max-width: 768px) {
+    /* Center the timeline line */
+    .timeline::after {
+        left: 50%;
+        margin-left: -1px;
+        z-index: 0; /* Line behind content */
+        top: -2rem; /* Start line higher to meet first marker */
+    }
+
+    /* Remove left padding to give text more space */
+    .timeline-item {
+        padding-left: 0;
+        margin-bottom: 3rem;
+    }
+
+    /* Center markers in the gaps between boxes */
+    .timeline-marker {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -1.5rem; /* Move up into the gap between items */
+        width: 12px;
+        height: 12px;
+    }
+    
+    /* Make content opaque enough to cover the line running behind it */
+    .timeline-content {
+        background: rgba(10, 15, 25, 0.95);
+        z-index: 1; /* Sits on top of the line */
+        padding: 1.5rem; /* Reduce padding slightly for more text space */
+    }
+
+    /* Disable hover transform on mobile to prevent weird shifts */
+    .timeline-item:hover .timeline-content {
+        transform: none;
+    }
 }
