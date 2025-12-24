@@ -265,7 +265,7 @@ underscoreHeadings.forEach((el) => {
 // "fixed" UI appear to drift and then snap back on scroll end. We compensate using VisualViewport.
 (function pinElevenLabsWidgetToVisualViewport() {
     function init() {
-        const host = document.getElementById('elevenlabs-widget-host');
+        const host = document.querySelector('elevenlabs-convai');
         const vv = window.visualViewport;
         if (!host || !vv) return;
 
@@ -289,10 +289,29 @@ underscoreHeadings.forEach((el) => {
         update();
     }
 
+    function initWhenReady() {
+        // Wait for the element to exist (script is async; element upgrade can be delayed)
+        if (document.querySelector('elevenlabs-convai')) {
+            init();
+            return;
+        }
+
+        const obs = new MutationObserver(() => {
+            if (document.querySelector('elevenlabs-convai')) {
+                obs.disconnect();
+                init();
+            }
+        });
+        obs.observe(document.documentElement, { childList: true, subtree: true });
+
+        // Safety: don't observe forever
+        setTimeout(() => obs.disconnect(), 10000);
+    }
+
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
+        document.addEventListener('DOMContentLoaded', initWhenReady);
     } else {
-        init();
+        initWhenReady();
     }
 })();
 
