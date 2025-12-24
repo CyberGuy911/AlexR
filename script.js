@@ -260,3 +260,39 @@ underscoreHeadings.forEach((el) => {
     el.innerHTML = text.replace(/_/g, '_<wbr>');
 });
 
+// --- 7. PIN ELEVENLABS WIDGET TO THE *VISIBLE* VIEWPORT ON MOBILE ---
+// Mobile browsers (especially iOS) animate the URL/tool bars during scroll, which can make
+// "fixed" UI appear to drift and then snap back on scroll end. We compensate using VisualViewport.
+(function pinElevenLabsWidgetToVisualViewport() {
+    function init() {
+        const host = document.getElementById('elevenlabs-widget-host');
+        const vv = window.visualViewport;
+        if (!host || !vv) return;
+
+        let rafId = 0;
+        const update = () => {
+            if (rafId) return;
+            rafId = requestAnimationFrame(() => {
+                rafId = 0;
+                const layoutHeight = document.documentElement.clientHeight;
+                const visualBottom = vv.offsetTop + vv.height;
+                const delta = layoutHeight - visualBottom;
+                // Shift the fixed host up/down so it stays glued to the visible viewport bottom.
+                host.style.transform = `translate3d(0, ${-delta}px, 0)`;
+            });
+        };
+
+        vv.addEventListener('resize', update);
+        vv.addEventListener('scroll', update);
+        window.addEventListener('orientationchange', update);
+
+        update();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+

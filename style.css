@@ -223,8 +223,23 @@ h2::before { content: "> "; color: var(--terminal-green); }
 }
 
 /* Eleven Labs AI Voice Widget */
+/* Keep the widget pinned to the viewport on mobile (avoids scroll/URL-bar snap) */
+#elevenlabs-widget-host {
+    position: fixed;
+    right: 16px;
+    bottom: max(16px, env(safe-area-inset-bottom));
+    z-index: 9999;
+    /* Don't block page interactions outside the actual widget UI */
+    pointer-events: none;
+}
+
+#elevenlabs-widget-host > elevenlabs-convai {
+    pointer-events: auto;
+}
+
 elevenlabs-convai {
     z-index: 9999 !important;
+    display: block;
     --font-family: 'JetBrains Mono', 'Courier New', monospace !important;
     font-family: 'JetBrains Mono', 'Courier New', monospace !important;
 }
@@ -323,7 +338,8 @@ elevenlabs-convai {
 
 .skill-tags {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 0.75rem;
 }
 

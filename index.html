@@ -27,8 +27,8 @@
             
             <!-- LEFT: Bigger Name (Clickable to Return to Top) -->
             <div class="flex items-center gap-2">
-                <a href="#" onclick="scrollToTop(event)" class="text-white font-bold tracking-tight text-base md:text-2xl font-mono no-underline cursor-pointer">ALEXANDER RUSSELL</a>
                 <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#00ff00]"></div>
+                <a href="#" onclick="scrollToTop(event)" class="text-white font-bold tracking-tight text-base md:text-2xl font-mono no-underline cursor-pointer">ALEXANDER RUSSELL</a>
             </div>
 
             <!-- RIGHT: Rounded, Big, Blue-Theme Button -->
@@ -218,7 +218,7 @@
                 
                 <!-- Text Content -->
                 <div class="md:col-span-2">
-                    <h1 class="text-3xl md:text-5xl mb-6 tracking-tight font-bold break-on-underscore">whois alexander_russell</h1>
+                    <h1 class="text-3xl md:text-5xl mb-6 tracking-tight font-bold break-on-underscore">meet alexander_russell</h1>
                     <p class="text-base md:text-xl leading-loose mb-6 text-gray-300 font-light">
                         I am an AI Engineer and Systems Architect focused on building tools that drive operational speed. Automating professionally since 2022. 
                         My approach combines the <strong class="text-white font-medium">technical rigour of Computer Science</strong> with the <strong class="text-white font-medium">business logic of Information Systems</strong> to create secure and scalable automation.
@@ -684,7 +684,9 @@
     <script src="script.js"></script>
 
     <!-- Eleven Labs AI Voice Widget -->
-    <elevenlabs-convai agent-id="agent_6501kbq091nefkfaea804fhs2xvd"></elevenlabs-convai>
+    <div id="elevenlabs-widget-host">
+        <elevenlabs-convai agent-id="agent_6501kbq091nefkfaea804fhs2xvd"></elevenlabs-convai>
+    </div>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 
 </body>
