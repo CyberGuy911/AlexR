@@ -1,0 +1,78 @@
+# Alexander Russell – AI Engineer & Systems Architect
+
+> Personal portfolio and professional profile of Alexander Russell, an AI Engineer based in Christchurch, New Zealand.
+
+## About
+
+Alexander Russell is an AI Engineer and Systems Architect focused on building tools that drive operational speed. He has been automating professionally since 2022. His approach combines the technical rigour of Computer Science with the business logic of Information Systems to create secure and scalable automation.
+
+From engineering real-time Voice Agents for Harkness AI to delivering a 71% productivity gain through automation at IJG Trails, he has a track record of identifying bottlenecks and deploying code to fix them.
+
+- Location: Christchurch, New Zealand
+- Email: me@alexrussell.io
+- LinkedIn: https://www.linkedin.com/in/alexrussell-tech
+- Website: https://alexrussell.io/
+
+## Current Roles
+
+### AI Engineer (Contract) – Harkness AI (Aug 2025 – Present)
+Leading the technical architecture and delivery of Agentic AI workflows and secure cloud infrastructure for business clients.
+- Multimodal Clinical Platform using Gemini and Next.js with patient emotion capture
+- Enterprise Voice Ecosystem using Vapi with React Analytics Dashboard
+- Agentic Tender Automation (AutoHive) using n8n, MCP, and RAG
+- Secure Heritage Platform using Supabase RLS for Elder Knowledge app
+
+### Founder & Lead Engineer – StudyPoints (Dec 2024 – Present)
+- Live full-stack SaaS built with React and Firebase
+- Automated AI pipeline that synthesises lecture audio into study notes
+
+## Previous Experience
+
+### Process Automation Lead – IJG Trails (Dec 2021 – May 2023)
+- Achieved 71% efficiency gain (7 hours reduced to under 2 hours daily)
+- Built VBA automation suite for data cleaning and Outlook email dispatch
+- Saved approximately 25 hours per week
+
+### Residential Advisor – UniLodge, University of Canterbury (Jan 2024 – Dec 2024)
+- Pastoral care for 30 first-year students
+- Crisis management and emergency protocols
+
+## Technical Skills
+
+### AI & Agentic
+Vapi (Voice AI), OpenAI / LLMs, MS Copilot Studio, RAG Pipelines, Prompt Engineering
+
+### Full Stack
+React.js / Next.js, Supabase (RLS/Auth), Firebase, SQL / Postgres, Vercel Deployment
+
+### Automation & Ops
+Python Scripting, n8n Workflows, VBA / Macros, Git / GitHub, Linux (Kali)
+
+## Education
+
+### B.Sc Computer Science and Information Systems – University of Canterbury (Jul 2023 – Jun 2026)
+- A-Grade average with 50% course overload
+- Selected for Deloitte x ServiceNow AI Hackathon (2025)
+- Key grades: Artificial Intelligence (A+), Web Architectures (A+), Relational Databases (A), Business Intelligence (A)
+
+### National Senior Certificate – Windhoek Afrikaans Private School (Dec 2021)
+- 7 Distinctions (Straight A's)
+- Computer Applications Technology: 90% (School Record)
+
+## Certifications
+- Prompt Engineering for MS Copilot – Microsoft (2025)
+- CS50's Introduction to AI with Python – Harvard University (2025)
+- Vector Search and Embeddings – Google Cloud (2025)
+- AI for Business Leaders – Microsoft (2026)
+
+## Leadership & Community
+
+### AI Forum New Zealand – LLM Working Group (Contributor)
+Selected contributor advancing national standards for Agentic AI and Data Sovereignty in Aotearoa.
+https://aiforum.org.nz/gen-ai-working-group/
+
+### President – African Society (AfroSoc), University of Canterbury (Jun 2025 – Present)
+Lead executive team in strategic planning, budgeting, and club collaborations.
+
+### International Student Ambassador – University of Canterbury (Jun 2025 – Present)
+University representative managing logistics and cultural integration for global students.
