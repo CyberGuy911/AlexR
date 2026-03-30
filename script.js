@@ -168,7 +168,7 @@ function runWorkflow() {
         btn.classList.replace('bg-blue-900/10', 'bg-blue-600');
         
     setTimeout(() => {
-        window.location.href = "mailto:me@alexrussell.io?subject=Portfolio%20Connection&body=Hey%20Alex,%20I%20ran%20your%20protocol.%20Let's%20chat.";
+        window.location.href = "mailto:me@alexrussell.io?subject=Portfolio%20Connection&body=" + encodeURIComponent("Hey Alex, I ran your protocol. Let's chat.");
         
         setTimeout(() => {
             btn.disabled = false;
