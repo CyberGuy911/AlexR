@@ -236,15 +236,23 @@ function askQuestion(type) {
     qEl.innerHTML = `<span class="text-gray-400">> ${question}</span>`;
     history.appendChild(qEl);
 
-    // Simulate Typing Delay
+    // Show thinking loader
+    const loaderEl = document.createElement('div');
+    loaderEl.className = "mb-4 flex items-center gap-2";
+    loaderEl.innerHTML = `<span class="text-green-500">ALEX_AGENT ></span> <span class="thinking-dots"><span>.</span><span>.</span><span>.</span></span>`;
+    history.appendChild(loaderEl);
+    history.scrollTop = history.scrollHeight;
+
+    // Replace loader with answer after 2 seconds
     setTimeout(() => {
+        loaderEl.remove();
         const aEl = document.createElement('div');
         aEl.className = "mb-4";
         aEl.innerHTML = `<span class="text-green-500">ALEX_AGENT ></span> ${answer}`;
         history.appendChild(aEl);
         history.scrollTop = history.scrollHeight;
-    }, 500);
-    
+    }, 2000);
+
     history.scrollTop = history.scrollHeight;
 }
 
