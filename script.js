@@ -200,6 +200,8 @@ function switchTab(tab) {
 
         contentLogs.classList.remove('hidden');
         contentChat.classList.add('hidden');
+        btnLogs.setAttribute('aria-selected', 'true');
+        btnChat.setAttribute('aria-selected', 'false');
     } else {
         // Active State for Chat
         btnChat.classList.add('text-green-400', 'bg-white/10', 'border-t', 'border-green-500');
@@ -211,6 +213,8 @@ function switchTab(tab) {
 
         contentLogs.classList.add('hidden');
         contentChat.classList.remove('hidden');
+        btnChat.setAttribute('aria-selected', 'true');
+        btnLogs.setAttribute('aria-selected', 'false');
     }
 }
 

@@ -270,7 +270,7 @@
 
                     <div class="flex flex-wrap gap-5 justify-center md:justify-start">
                         <a href="mailto:me@alexrussell.io?subject=Inquiry%20from%20alexrussell.io&body=Hi%20Alexander%2C%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20discuss..." class="header-btn px-6 py-3 text-sm md:text-base"><i class="fas fa-envelope mr-2"></i>Email</a>
-                        <a href="https://www.linkedin.com/in/alexrussell-tech" target="_blank" class="header-btn px-6 py-3 text-sm md:text-base"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/alexrussell-tech" target="_blank" rel="noopener noreferrer" class="header-btn px-6 py-3 text-sm md:text-base"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
                         <a href="Alexander_Russell_CV.pdf" download="Alexander_Russell_CV.pdf" class="header-btn px-6 py-3 text-sm md:text-base"><i class="fas fa-file-pdf mr-2"></i>Resume</a>
                     </div>
                 </div>
@@ -295,26 +295,26 @@
                 
                 <div class="glass-panel flex flex-col relative overflow-hidden h-[300px] md:h-full">
                     
-                    <div class="flex items-center bg-black/40 border-b border-white/10 px-4 py-2 gap-4 overflow-x-auto scrollable-tabs">
-                        <div class="flex gap-2 mr-4 flex-shrink-0">
+                    <div class="flex items-center bg-black/40 border-b border-white/10 px-4 py-2 gap-4 overflow-x-auto scrollable-tabs" role="tablist" aria-label="Code panel tabs">
+                        <div class="flex gap-2 mr-4 flex-shrink-0" aria-hidden="true">
                             <div class="w-3 h-3 rounded-full bg-red-900"></div>
                             <div class="w-3 h-3 rounded-full bg-yellow-900"></div>
                             <div class="w-3 h-3 rounded-full bg-green-900"></div>
                         </div>
 
-                        <button onclick="switchTab('logs')" id="tab-logs" class="text-[10px] md:text-xs font-mono px-3 py-1 rounded transition-colors text-green-400 bg-white/10 border-t border-green-500 whitespace-nowrap flex-shrink-0">
+                        <button onclick="switchTab('logs')" id="tab-logs" role="tab" aria-selected="true" aria-controls="content-logs" class="text-[10px] md:text-xs font-mono px-3 py-1 rounded transition-colors text-green-400 bg-white/10 border-t border-green-500 whitespace-nowrap flex-shrink-0">
                             ~/active_agent_v3.py
                         </button>
-                        <button onclick="switchTab('chat')" id="tab-chat" class="text-[10px] md:text-xs font-mono px-3 py-1 rounded transition-colors text-gray-500 hover:text-green-400 whitespace-nowrap flex-shrink-0">
+                        <button onclick="switchTab('chat')" id="tab-chat" role="tab" aria-selected="false" aria-controls="content-chat" class="text-[10px] md:text-xs font-mono px-3 py-1 rounded transition-colors text-gray-500 hover:text-green-400 whitespace-nowrap flex-shrink-0">
                             ~/ask_alex_ai.sh
                         </button>
                     </div>
 
-                    <div id="content-logs" class="p-5 h-full overflow-hidden relative">
+                    <div id="content-logs" role="tabpanel" aria-labelledby="tab-logs" class="p-5 h-full overflow-hidden relative">
                         <div id="ghost-code-window" class="text-[11px] md:text-xs text-green-500/90 font-mono overflow-y-auto h-full leading-relaxed whitespace-pre-wrap pb-8 no-touch-pan"></div>
                     </div>
 
-                    <div id="content-chat" class="hidden p-5 h-full flex flex-col overflow-hidden">
+                    <div id="content-chat" role="tabpanel" aria-labelledby="tab-chat" class="hidden p-5 h-full flex flex-col overflow-hidden">
                         <div id="chat-history" class="flex-1 overflow-y-auto text-xs font-mono space-y-4 mb-4 pr-2 text-gray-300">
                             <div class="mb-2">
                                 <span class="text-green-500">ALEX_AGENT ></span> Hello! I am Alexander's personal agent. How can I help you today?
@@ -322,13 +322,13 @@
                         </div>
                         
                         <div class="grid grid-cols-1 gap-2 flex-shrink-0">
-                            <button onclick="askQuestion('who')" class="w-full text-left text-[10px] border border-gray-700 hover:border-green-500 hover:text-green-400 p-2 rounded bg-black/40 transition-colors">
+                            <button onclick="askQuestion('who')" aria-label="Ask: Who is Alexander?" class="w-full text-left text-[10px] border border-gray-700 hover:border-green-500 hover:text-green-400 p-2 rounded bg-black/40 transition-colors">
                                 > Who is Alexander?
                             </button>
-                            <button onclick="askQuestion('stack')" class="w-full text-left text-[10px] border border-gray-700 hover:border-green-500 hover:text-green-400 p-2 rounded bg-black/40 transition-colors">
+                            <button onclick="askQuestion('stack')" aria-label="Ask: What is his tech stack?" class="w-full text-left text-[10px] border border-gray-700 hover:border-green-500 hover:text-green-400 p-2 rounded bg-black/40 transition-colors">
                                 > What is his tech stack?
                             </button>
-                            <button onclick="askQuestion('contact')" class="w-full text-left text-[10px] border border-gray-700 hover:border-green-500 hover:text-green-400 p-2 rounded bg-black/40 transition-colors">
+                            <button onclick="askQuestion('contact')" aria-label="Ask: How do I contact him?" class="w-full text-left text-[10px] border border-gray-700 hover:border-green-500 hover:text-green-400 p-2 rounded bg-black/40 transition-colors">
                                 > How do I contact him?
                             </button>
                         </div>
@@ -375,7 +375,7 @@
                         </div>
                     </div>
 
-                    <button onclick="runWorkflow()" id="wf-btn" class="w-full py-4 border border-green-500 bg-green-900/10 text-green-500 hover:bg-green-500 hover:text-black hover:shadow-[0_0_20px_rgba(0,255,0,0.6)] transition-all duration-200 font-bold text-sm md:text-base tracking-[0.2em] uppercase rounded-sm mt-4">
+                    <button onclick="runWorkflow()" id="wf-btn" aria-label="Initialize contact protocol to send an email" class="w-full py-4 border border-green-500 bg-green-900/10 text-green-500 hover:bg-green-500 hover:text-black hover:shadow-[0_0_20px_rgba(0,255,0,0.6)] transition-all duration-200 font-bold text-sm md:text-base tracking-[0.2em] uppercase rounded-sm mt-4">
                         [&#160;Initialize Protocol&#160;]
                     </button>
                 </div>
@@ -390,7 +390,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
                 
                 <div class="md:col-span-2">
-                    <h1 class="text-3xl md:text-5xl mb-6 tracking-tight font-bold break-on-underscore">meet alexander_russell</h1>
+                    <h2 class="text-3xl md:text-5xl mb-6 tracking-tight font-bold break-on-underscore text-green-500 !mt-0 !border-b-0 !pb-0 before:!content-['#_']">meet alexander_russell</h2>
                     <p class="text-base md:text-xl leading-loose mb-6 text-gray-300 font-light">
                         I am an AI Engineer and Systems Architect focused on building tools that drive operational speed. Automating professionally since 2022. 
                         My approach combines the <strong class="text-white font-medium">technical rigour of Computer Science</strong> with the <strong class="text-white font-medium">business logic of Information Systems</strong> to create secure and scalable automation.
@@ -696,10 +696,10 @@
                 <div class="mt-4">
                     <strong class="text-gray-500 text-xs uppercase">Key Coursework Grades:</strong>
                     <ul class="flex flex-wrap gap-2 mt-2 text-xs font-mono">
-                        <li><a href="https://courseinfo.canterbury.ac.nz/GetCourseDetails.aspx?course=COSC367&occurrence=25S2(C)&year=2025" target="_blank" class="px-2 py-1 bg-gray-800 text-gray-300 border border-gray-700 hover:border-green-500 hover:text-green-400 hover:bg-gray-900 transition-all duration-200 inline-block no-underline cursor-pointer">Artificial Intelligence: A+</a></li>
-                        <li><a href="https://courseinfo.canterbury.ac.nz/GetCourseDetails.aspx?course=SENG365&occurrence=25S1(C)&year=2025" target="_blank" class="px-2 py-1 bg-gray-800 text-gray-300 border border-gray-700 hover:border-green-500 hover:text-green-400 hover:bg-gray-900 transition-all duration-200 inline-block no-underline cursor-pointer">Web Architectures: A+</a></li>
-                        <li><a href="https://courseinfo.canterbury.ac.nz/GetCourseDetails.aspx?course=COSC265&occurrence=25S2(C)&year=2025" target="_blank" class="px-2 py-1 bg-gray-800 text-gray-300 border border-gray-700 hover:border-green-500 hover:text-green-400 hover:bg-gray-900 transition-all duration-200 inline-block no-underline cursor-pointer">Relational Databases: A</a></li>
-                        <li><a href="https://courseinfo.canterbury.ac.nz/GetCourseDetails.aspx?course=INFO361&occurrence=25S2(C)&year=2025" target="_blank" class="px-2 py-1 bg-gray-800 text-gray-300 border border-gray-700 hover:border-green-500 hover:text-green-400 hover:bg-gray-900 transition-all duration-200 inline-block no-underline cursor-pointer">Business Intelligence: A</a></li>
+                        <li><a href="https://courseinfo.canterbury.ac.nz/GetCourseDetails.aspx?course=COSC367&occurrence=25S2(C)&year=2025" target="_blank" rel="noopener noreferrer" class="px-2 py-1 bg-gray-800 text-gray-300 border border-gray-700 hover:border-green-500 hover:text-green-400 hover:bg-gray-900 transition-all duration-200 inline-block no-underline cursor-pointer">Artificial Intelligence: A+</a></li>
+                        <li><a href="https://courseinfo.canterbury.ac.nz/GetCourseDetails.aspx?course=SENG365&occurrence=25S1(C)&year=2025" target="_blank" rel="noopener noreferrer" class="px-2 py-1 bg-gray-800 text-gray-300 border border-gray-700 hover:border-green-500 hover:text-green-400 hover:bg-gray-900 transition-all duration-200 inline-block no-underline cursor-pointer">Web Architectures: A+</a></li>
+                        <li><a href="https://courseinfo.canterbury.ac.nz/GetCourseDetails.aspx?course=COSC265&occurrence=25S2(C)&year=2025" target="_blank" rel="noopener noreferrer" class="px-2 py-1 bg-gray-800 text-gray-300 border border-gray-700 hover:border-green-500 hover:text-green-400 hover:bg-gray-900 transition-all duration-200 inline-block no-underline cursor-pointer">Relational Databases: A</a></li>
+                        <li><a href="https://courseinfo.canterbury.ac.nz/GetCourseDetails.aspx?course=INFO361&occurrence=25S2(C)&year=2025" target="_blank" rel="noopener noreferrer" class="px-2 py-1 bg-gray-800 text-gray-300 border border-gray-700 hover:border-green-500 hover:text-green-400 hover:bg-gray-900 transition-all duration-200 inline-block no-underline cursor-pointer">Business Intelligence: A</a></li>
                     </ul>
                 </div>
             </div>
@@ -730,7 +730,7 @@
             <h2 class="text-3xl md:text-4xl text-white border-b border-white/10 pb-4 mb-10 break-on-underscore">licenses_&_certs</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm font-mono">
                 
-                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg flex items-center">
+                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" rel="noopener noreferrer" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg flex items-center">
                     <div class="flex items-center gap-4 w-full">
                         <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-600 group-hover:border-green-500 transition">
                             <img src="images/Microsoft.jpg" alt="Microsoft" class="w-full h-full object-cover">
@@ -743,7 +743,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg flex items-center">
+                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" rel="noopener noreferrer" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg flex items-center">
                     <div class="flex items-center gap-4 w-full">
                         <!-- LOGO CIRCLE -->
                         <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-600 group-hover:border-green-500 transition">
@@ -757,7 +757,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg flex items-center">
+                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" rel="noopener noreferrer" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg flex items-center">
                     <div class="flex items-center gap-4 w-full">
                         <!-- LOGO CIRCLE -->
                         <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-600 group-hover:border-green-500 transition">
@@ -771,7 +771,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg flex items-center">
+                <a href="https://www.linkedin.com/in/alexrussell-tech/details/certifications/" target="_blank" rel="noopener noreferrer" class="cert-card p-4 border border-gray-800 bg-gray-900/20 animated-border-box transition duration-300 group rounded-lg flex items-center">
                     <div class="flex items-center gap-4 w-full">
                         <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-600 group-hover:border-green-500 transition">
                             <img src="images/Microsoft.jpg" alt="Microsoft" class="w-full h-full object-cover">
@@ -801,7 +801,7 @@
 
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
     <elevenlabs-convai agent-id="agent_6501kbq091nefkfaea804fhs2xvd"></elevenlabs-convai>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
