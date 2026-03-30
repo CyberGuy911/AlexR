@@ -29,11 +29,23 @@
     <meta name="twitter:description" content="AI Engineer specialising in Agentic AI, Voice AI, and full-stack development. Based in Christchurch, NZ.">
     <meta name="twitter:image" content="https://alexrussell.io/images/Alex11.jpg">
 
-    <!-- Structured Data: Person + ProfilePage -->
+    <!-- Structured Data: Person + ProfilePage + WebSite -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
+        "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://alexrussell.io/#website",
+            "url": "https://alexrussell.io/",
+            "name": "Alexander Russell – AI Engineer & Consultant",
+            "author": { "@id": "https://alexrussell.io/#alexander-russell" }
+        },
+        {
         "@type": "ProfilePage",
+        "@id": "https://alexrussell.io/#profilepage",
+        "dateCreated": "2025-01-01",
+        "dateModified": "2026-03-30",
         "mainEntity": {
             "@type": "Person",
             "@id": "https://alexrussell.io/#alexander-russell",
@@ -54,26 +66,24 @@
                 "https://www.linkedin.com/in/alexrussell-tech"
             ],
             "knowsAbout": [
-                "Agentic AI",
-                "Voice AI",
+                { "@type": "Thing", "name": "Artificial Intelligence", "sameAs": "https://en.wikipedia.org/wiki/Artificial_intelligence" },
+                { "@type": "Thing", "name": "Intelligent Agent", "sameAs": "https://en.wikipedia.org/wiki/Intelligent_agent" },
+                { "@type": "Thing", "name": "Voice User Interface", "sameAs": "https://en.wikipedia.org/wiki/Voice_user_interface" },
+                { "@type": "Thing", "name": "Large Language Model", "sameAs": "https://en.wikipedia.org/wiki/Large_language_model" },
+                { "@type": "Thing", "name": "Retrieval-Augmented Generation", "sameAs": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation" },
+                { "@type": "Thing", "name": "Prompt Engineering", "sameAs": "https://en.wikipedia.org/wiki/Prompt_engineering" },
+                { "@type": "Thing", "name": "React (JavaScript library)", "sameAs": "https://en.wikipedia.org/wiki/React_(JavaScript_library)" },
+                { "@type": "Thing", "name": "Next.js", "sameAs": "https://en.wikipedia.org/wiki/Next.js" },
+                { "@type": "Thing", "name": "Supabase" },
+                { "@type": "Thing", "name": "Firebase", "sameAs": "https://en.wikipedia.org/wiki/Firebase" },
+                { "@type": "Thing", "name": "SQL", "sameAs": "https://en.wikipedia.org/wiki/SQL" },
+                { "@type": "Thing", "name": "PostgreSQL", "sameAs": "https://en.wikipedia.org/wiki/PostgreSQL" },
+                { "@type": "Thing", "name": "Python (programming language)", "sameAs": "https://en.wikipedia.org/wiki/Python_(programming_language)" },
+                { "@type": "Thing", "name": "n8n" },
+                { "@type": "Thing", "name": "Visual Basic for Applications", "sameAs": "https://en.wikipedia.org/wiki/Visual_Basic_for_Applications" },
+                { "@type": "Thing", "name": "Git", "sameAs": "https://en.wikipedia.org/wiki/Git" },
+                { "@type": "Thing", "name": "Linux", "sameAs": "https://en.wikipedia.org/wiki/Linux" },
                 "Vapi",
-                "OpenAI",
-                "LLMs",
-                "Claude",
-                "Gemini",
-                "RAG Pipelines",
-                "Prompt Engineering",
-                "React.js",
-                "Next.js",
-                "Supabase",
-                "Firebase",
-                "SQL",
-                "PostgreSQL",
-                "Python",
-                "n8n Workflows",
-                "VBA",
-                "Git",
-                "Linux",
                 "MS Copilot Studio",
                 "Vercel"
             ],
@@ -84,7 +94,6 @@
                     "occupationLocation": { "@type": "Place", "name": "Remote" },
                     "description": "Leading technical architecture and delivery of Agentic AI workflows and secure cloud infrastructure for business clients at Harkness AI. Projects include multimodal clinical platforms, enterprise voice ecosystems, agentic tender automation, and secure heritage platforms.",
                     "hiringOrganization": { "@type": "Organization", "name": "Harkness AI" },
-                    "estimatedSalary": [],
                     "startDate": "2025-08"
                 },
                 {
@@ -157,6 +166,8 @@
                 }
             ]
         }
+        }
+        ]
     }
     </script>
 
