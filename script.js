@@ -43,7 +43,7 @@ window.addEventListener('scroll', function() {
 });
 
 // --- 2. STATUS LINE TYPER (Header) ---
-const statusText = "System Online: Available Jan 2026";
+const statusText = "SYSTEM ONLINE: AVAILABLE";
 const statusEl = document.getElementById('status-line');
 let statusIdx = 0;
 
